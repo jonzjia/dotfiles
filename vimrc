@@ -22,8 +22,10 @@ set scrolloff=5 		"keep at least 5 lines above/below
 set undolevels=1000		"store up to 1000 undos
 set cul					"highlight current line
 set cuc					"hightlight column line as well. This is just kind of cool to watch...
-hi CursorLine cterm=NONE ctermbg=17
-hi CursorColumn cterm=NONE ctermbg=17
+hi CursorLine cterm=NONE 
+"ctermbg=17
+hi CursorColumn cterm=NONE 
+"ctermbg=17
 set wildmenu			"some kind of tab-completion thing
 filetype on 			"enable filetype detection
 filetype indent on 		"enable filetype-specific indenting
