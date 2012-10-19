@@ -8,7 +8,7 @@
 ##Variables#####################################################################
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="vimrc.vim tmux.conf bash_profile vim"	#list of files/folders to symlink
+files="vimrc tmux.conf bash_profile vim"	#list of files/folders to symlink
 ################################################################################
 
 
