@@ -3,6 +3,7 @@ set nocompatible
 set laststatus=2
 let g:Powerline_synbols = 'fancy'
 let mapleader = ","
+set background=dark
 colorscheme solarized
 set encoding=utf-8
 set t_Co=256
