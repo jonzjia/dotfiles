@@ -40,6 +40,16 @@ alias jerusalem='ssh jzj2101@jerusalem.clic.cs.columbia.edu'
 
 
 #--Advanced-Programming---------------------------------------------------------
+alias lab1='cd ~/cs3157/lab1'
+alias lab2='cd ~/cs3157/lab2'
+alias lab3='cd ~/cs3157/lab3'
+alias lab4='cd ~/cs3157/lab4'
+alias lab5='cd ~/cs3157/lab5'
+alias lab6='cd ~/cs3157/lab6'
+alias lab7='cd ~/cs3157/lab7'
+alias lab8='cd ~/cs3157/lab8'
+alias lab9='cd ~/cs3157/lab9'
+alias lab10='cd ~/cs3157/lab10'
 
 
 #--Academic-Aliases-------------------------------------------------------------
