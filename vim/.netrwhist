@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/jonzjia/Dropbox/[12x]/[Discrete]'
 let g:netrw_dirhist_2='/Users/jonzjia/Dropbox/[Workspace]/[LatinII]'
 let g:netrw_dirhist_3='/Users/jonzjia/Dropbox/[Workspace]'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/jonzjia'
 let g:netrw_dirhist_6='/Users/jonzjia/scripts'
 let g:netrw_dirhist_7='/Users/jonzjia'
 let g:netrw_dirhist_8='/Users/jonzjia/Dropbox/[Workspace]/[UI]/HW2'
+let g:netrw_dirhist_9='/Users/jonzjia/dotfiles'

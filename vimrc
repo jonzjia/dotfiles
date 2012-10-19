@@ -85,9 +85,9 @@ nnoremap j gj
 nnoremap k gk
 
 "Edit vimrc file in a split window
-:nnoremap <leader>ev :split ~/Dropbox/vim/vimrc.vim<cr>
+:nnoremap <leader>ev :split ~/dotfiles/vimrc<cr>
 "Source vimrc file
-:nnoremap <leader>sv :source ~/Dropbox/vim/vimrc.vim<cr>
+:nnoremap <leader>sv :source ~/dotfiles/vimrc<cr>
 
 "Move to the beginning of the line
 nnoremap H 0

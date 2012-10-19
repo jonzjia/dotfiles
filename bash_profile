@@ -3,8 +3,8 @@ export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 
 
 #--Bash-Aliases-----------------------------------------------------------------
-alias profile='vim ~/.bash_profile'
-alias refresh='source ~/.bash_profile'
+alias profile='vim ~/dotfiles/bash_profile'
+alias refresh='source ~/dotfiles/bash_profile'
 alias k='clear'
 alias ls='ls -G'
 alias ll='ls -alhF --color=auto'
@@ -12,7 +12,7 @@ alias all='ls -a'
 
 
 #--vimrc------------------------------------------------------------------------
-alias vimrc='vim ~/Dropbox/vim/vimrc.vim'
+alias vimrc='vim ~/dotfiles/vimrc'
 export EDITOR=vim
 
 
@@ -37,6 +37,9 @@ alias spica='ssh circacmunny@spica.dreamhost.com'
 alias cunix='ssh jzj2101@cunix.cc.columbia.edu'
 alias clic='ssh jzj2101@clic-lab.cs.columbia.edu'
 alias jerusalem='ssh jzj2101@jerusalem.clic.cs.columbia.edu'
+
+
+#--Advanced-Programming---------------------------------------------------------
 
 
 #--Academic-Aliases-------------------------------------------------------------
