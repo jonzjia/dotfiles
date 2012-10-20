@@ -50,7 +50,12 @@ alias lab7='cd ~/cs3157/lab7'
 alias lab8='cd ~/cs3157/lab8'
 alias lab9='cd ~/cs3157/lab9'
 alias lab10='cd ~/cs3157/lab10'
-
+alias jae='cd /home/jae/cs3157-pub/bin/'
+ulimit -u 256
+# force mv, rm and cp to ask user before clobbering a file
+alias mv="mv -i $*"
+alias rm="rm -i $*"
+alias cp="cp -i $*"
 
 #--Academic-Aliases-------------------------------------------------------------
 alias classes='pushd . && open ~/Dropbox/\[12x\]/'
