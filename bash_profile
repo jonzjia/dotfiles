@@ -5,6 +5,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 #--Bash-Aliases-----------------------------------------------------------------
 alias profile='vim ~/dotfiles/bash_profile'
 alias refresh='source ~/dotfiles/bash_profile'
+alias dotfiles='cd ~/dotfiles'
 alias k='clear'
 alias ls='ls -G'
 alias ll='ls -alhF --color=auto'
