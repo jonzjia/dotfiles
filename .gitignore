@@ -1,2 +1,9 @@
-#ignore the stupid netrwhist file
+# Ignore the stupid netrwhist file
 /vim/.netrwhist
+
+# Ignore OS X's silly DS_Store
+.DS_Store
+
+# Ignore swap files
+*.swp
+*~
