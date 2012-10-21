@@ -1,10 +1,5 @@
 let g:netrw_dirhistmax  =10
-<<<<<<< HEAD
 let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/jzj2101/cs3157/lab4/part1'
-let g:netrw_dirhist_2='/home/jzj2101/cs3157/lab3/solutions/part1'
-let g:netrw_dirhist_3='/home/jzj2101/cs3157/lab4/part1'
-=======
-let g:netrw_dirhist_cnt =1
 let g:netrw_dirhist_1='/Users/jonzjia/dotfiles/vim'
->>>>>>> a52378b25f0ac52fd2d7959308b78275e70897e4
+let g:netrw_dirhist_2='/Users/jonzjia/Dropbox/notes'
+let g:netrw_dirhist_3='/Users/jonzjia/dotfiles/vim/colors'

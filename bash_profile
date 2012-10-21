@@ -22,6 +22,7 @@ alias downloads='pushd . && open ~/Downloads'
 alias dl='open ~/Downloads'
 alias code='open ~/Dropbox/[CodeWorkspace]'
 alias projects='pushd . && open ~/Dropbox/Projects && cd ~/Dropbox/Projects/' 
+alias notes='cd ~/Dropbox/notes/ && vim ~/Dropbox/notes'
 
 
 #--Stack-Navigation-------------------------------------------------------------
