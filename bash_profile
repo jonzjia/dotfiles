@@ -1,6 +1,8 @@
 #--PATH-------------------------------------------------------------------------
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/X11/bin:/usr/local/gnat/bin
 
+#--Settings---------------------------------------------------------------------
+set -o vi
 
 #--Bash-Aliases-----------------------------------------------------------------
 alias profile='vim ~/dotfiles/bash_profile'

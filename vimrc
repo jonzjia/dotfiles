@@ -22,10 +22,9 @@ set scrolloff=5 		"keep at least 5 lines above/below
 set undolevels=1000		"store up to 1000 undos
 set cul					"highlight current line
 set cuc					"hightlight column line as well. This is just kind of cool to watch...
-hi CursorLine cterm=NONE 
-"ctermbg=17
-hi CursorColumn cterm=NONE 
-"ctermbg=17
+hi CursorLine cterm=NONE ctermbg=17
+hi CursorColumn cterm=NONE ctermbg=17
+set mouse=a
 set wildmenu			"some kind of tab-completion thing
 filetype on 			"enable filetype detection
 filetype indent on 		"enable filetype-specific indenting
@@ -56,6 +55,7 @@ endif
 "PROSE Settings
 autocmd BufRead *\.txt setlocal formatoptions=1
 autocmd BufRead *\.txt setlocal lbr
+autocmd BufRead *\.txt setlocal colorcolumn=80
 "make it easier to move around in prose
 autocmd BufRead *\.txt map j gj
 autocmd BufRead *\.txt map k gk
@@ -68,7 +68,9 @@ autocmd Filetype text setlocal textwidth=80
 "Put a row of minus signs for text files
 :nnoremap <leader>2 yypVr-
 "Wrap one line downwards of text to 80 characters
-:nnoremap <leader>w gq$
+:nnoremap <leader>f gq$
+"Save the file
+:nnoremap <leader>w :w<cr>
 
 "Extensions
 :nnoremap <leader>n :NERDTreeToggle<CR>

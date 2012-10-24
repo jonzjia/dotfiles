@@ -1,5 +1,5 @@
 # Ignore the stupid netrwhist file
-/vim/.netrwhist
+vim/.netrwhist
 
 # Ignore OS X's silly DS_Store
 .DS_Store
