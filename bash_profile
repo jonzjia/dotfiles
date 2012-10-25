@@ -12,6 +12,7 @@ alias k='clear'
 alias ls='ls -G'
 alias ll='ls -alhF --color=auto'
 alias all='ls -a'
+alias list='ls -1'
 
 
 #--vimrc------------------------------------------------------------------------
