@@ -3,8 +3,22 @@ set nocompatible
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let mapleader = ","
-set background=dark
+map \ :
+
+"Colors
+
+"Light
+set background=light
+hi CursorLine cterm=NONE ctermbg=17
+hi CursorColumn cterm=NONE ctermbg=17
+
+"Dark
+"set background=dark
+"hi CursorLine cterm=NONE ctermbg=17
+"hi CursorColumn cterm=NONE ctermbg=17
+
 colorscheme solarized
+
 set encoding=utf-8
 set t_Co=256
 filetype plugin on
@@ -18,12 +32,10 @@ nnoremap <cr> :noh<cr>
 set smarttab 
 set ts=4
 set shiftwidth=4
-set scrolloff=5 		"keep at least 5 lines above/below
+set scrolloff=10 		"keep at least 5 lines above/below
 set undolevels=1000		"store up to 1000 undos
 set cul					"highlight current line
 set cuc					"hightlight column line as well. This is just kind of cool to watch...
-hi CursorLine cterm=NONE ctermbg=17
-hi CursorColumn cterm=NONE ctermbg=17
 set mouse=a
 set wildmenu			"some kind of tab-completion thing
 filetype on 			"enable filetype detection
@@ -65,12 +77,12 @@ autocmd BufRead *\.markdown map k gk
 autocmd Filetype text setlocal textwidth=80
 "Put a row of equal signs right underneath a line
 :nnoremap <leader>1 yypVr=
-"Put a row of minus signs for text files
-:nnoremap <leader>2 yypVr-
+"Put a row of minus signs for text files, then enter insert mode
+:nnoremap <leader>2 yypVr-o
 "Wrap one line downwards of text to 80 characters
 :nnoremap <leader>f gq$
-"Save the file
-:nnoremap <leader>w :w<cr>
+"Count the number of words
+:nnoremap <leader>w g<C-g>
 
 "Extensions
 :nnoremap <leader>n :NERDTreeToggle<CR>
@@ -80,8 +92,8 @@ autocmd Filetype text setlocal textwidth=80
 :nnoremap + ddp
 "pressing '-' will bring the current line up
 :nnoremap - ddkP
-"pressing space will center the current line
-:nnoremap <space> zz
+"pressing space will bring the current line to near the top
+:nnoremap <space> zt
 
 
 "Sane movement in files with long lines
