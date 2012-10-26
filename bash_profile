@@ -1,8 +1,12 @@
 #--PATH-------------------------------------------------------------------------
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/X11/bin:/usr/local/gnat/bin
 
-#--Settings---------------------------------------------------------------------
+
+#--Startup-Settings-------------------------------------------------------------
 set -o vi
+bind "set completion-ignore-case on" 	#ignore case in tab-completion
+bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
+
 
 #--Bash-Aliases-----------------------------------------------------------------
 alias profile='vim ~/dotfiles/bash_profile'
