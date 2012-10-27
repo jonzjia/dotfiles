@@ -8,12 +8,12 @@ map \ :
 "Colors
 
 "Light
-set background=light
+"set background=light
 hi CursorLine cterm=NONE ctermbg=17
 hi CursorColumn cterm=NONE ctermbg=17
 
 "Dark
-"set background=dark
+set background=dark
 "hi CursorLine cterm=NONE ctermbg=17
 "hi CursorColumn cterm=NONE ctermbg=17
 

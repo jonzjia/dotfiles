@@ -6,6 +6,9 @@ export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
+cd ~/dotfiles
+git pull
+cd
 
 
 #--Bash-Aliases-----------------------------------------------------------------
@@ -15,8 +18,10 @@ alias dotfiles='cd ~/dotfiles'
 alias k='clear'
 alias ls='ls -G'
 alias ll='ls -alhF --color=auto'
-alias all='ls -a'
+alias la='ls -a'
 alias list='ls -1'
+alias back='cd -'
+
 
 
 #--vimrc------------------------------------------------------------------------
