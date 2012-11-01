@@ -8,12 +8,12 @@ map \ :!
 "Colors
 
 "Light
-"set background=light
+set background=light
 hi CursorLine cterm=NONE ctermbg=17
 hi CursorColumn cterm=NONE ctermbg=17
 
 "Dark
-set background=dark
+"set background=dark
 "hi CursorLine cterm=NONE ctermbg=17
 "hi CursorColumn cterm=NONE ctermbg=17
 
@@ -32,7 +32,7 @@ nnoremap <cr> :noh<cr>
 set smarttab 
 set ts=4
 set shiftwidth=4
-set scrolloff=10 		"keep at least 5 lines above/below
+set scrolloff=25 		"keep at least 25 lines above/below
 set undolevels=1000		"store up to 1000 undos
 set cul					"highlight current line
 set cuc					"hightlight column line as well. This is just kind of cool to watch...
@@ -58,8 +58,9 @@ let g:syntastic_quiet_warnings=1
 if has("gui_macvim")
 	set guioptions-=T
 	set guioptions-=r
-	set transparency=5
-	set background=dark
+	set transparency=0
+	"set background=dark
+	set background=light
 	colorscheme solarized
 	set guifont=Menlo\ Regular:h12
 endif

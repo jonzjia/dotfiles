@@ -3,6 +3,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 
 
 #--Startup-Settings-------------------------------------------------------------
+export TERM=xterm-256color
 set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
