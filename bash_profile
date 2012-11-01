@@ -7,9 +7,13 @@ export TERM=xterm-256color
 set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
+
+
+#--Update-Dotfiles--------------------------------------------------------------
+pushd .
 cd ~/dotfiles
 git pull
-cd
+popd
 
 
 #--Bash-Aliases-----------------------------------------------------------------
