@@ -8,12 +8,12 @@ map \ :!
 "Colors
 
 "Light
-set background=light
+"set background=light
 hi CursorLine cterm=NONE ctermbg=17
 hi CursorColumn cterm=NONE ctermbg=17
 
 "Dark
-"set background=dark
+set background=dark
 "hi CursorLine cterm=NONE ctermbg=17
 "hi CursorColumn cterm=NONE ctermbg=17
 
@@ -27,17 +27,21 @@ syntax on
 set ruler
 set incsearch
 set hlsearch
-"clear out highlights left by search after pressing ente
+"clear out highlights left by search after pressing enter
 nnoremap <cr> :noh<cr>
-set smarttab 
-set ts=4
+set noexpandtab
+set copyindent
+set preserveindent
+set softtabstop=0
 set shiftwidth=4
+set tabstop=4
+set smarttab 
 set scrolloff=25 		"keep at least 25 lines above/below
 set undolevels=1000		"store up to 1000 undos
 set cul					"highlight current line
 set cuc					"hightlight column line as well. This is just kind of cool to watch...
 set mouse=a
-set wildmenu			"some kind of tab-completion thing
+set wildmenu			"Really nice tab completion when using :b or :e
 filetype on 			"enable filetype detection
 filetype indent on 		"enable filetype-specific indenting
 set preserveindent 		"save as much indent structure as possible
@@ -59,9 +63,6 @@ if has("gui_macvim")
 	set guioptions-=T
 	set guioptions-=r
 	set transparency=0
-	"set background=dark
-	set background=light
-	colorscheme solarized
 	set guifont=Menlo\ Regular:h12
 endif
 
