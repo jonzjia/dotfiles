@@ -1,5 +1,6 @@
 #--PATH-------------------------------------------------------------------------
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/X11/bin:/usr/local/gnat/bin
+export PATH="$HOME/local/bin:$PATH"
 
 
 #--Startup-Settings-------------------------------------------------------------
@@ -79,7 +80,7 @@ alias cp="cp -i $*"
 #--Academic-Aliases-------------------------------------------------------------
 alias classes='pushd . && open ~/Dropbox/\[12x\]/'
 alias workspace='pushd . && open ~/Dropbox/[Workspace]'
-alias ws='pushd . && open ~/Dropbox/[Workspace] && cd ~/Dropbox/[Workspace]/'
+alias ws='pushd . && cd ~/Dropbox/[Workspace]/'
 alias latin='pushd . && open ~/Dropbox/\[12x\]/\[LatinII\]/ && cd ~/Dropbox/[12x]/[LatinII]/'
 alias words='pushd . && cd ~/Dropbox/[12x]/[LatinII]/Words/ && ~/Dropbox/[12x]/[LatinII]/Words/words'
 alias fundamentals='pushd . && open ~/Dropbox/\[12x\]/\[Fund\]/ && cd ~/Dropbox/[12x]/[Fund]/'

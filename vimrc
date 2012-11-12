@@ -13,7 +13,7 @@ hi CursorLine cterm=NONE ctermbg=17
 hi CursorColumn cterm=NONE ctermbg=17
 
 "Dark
-set background=dark
+set background=light
 "hi CursorLine cterm=NONE ctermbg=17
 "hi CursorColumn cterm=NONE ctermbg=17
 
@@ -27,6 +27,8 @@ syntax on
 set ruler
 set incsearch
 set hlsearch
+set spell
+set spelllang=en
 "clear out highlights left by search after pressing enter
 nnoremap <cr> :noh<cr>
 set noexpandtab
