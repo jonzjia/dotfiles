@@ -17,6 +17,10 @@ git pull
 popd
 
 
+#--Source-bashrc----------------------------------------------------------------
+source ~/.bashrc
+
+
 #--Bash-Aliases-----------------------------------------------------------------
 alias profile='vim ~/dotfiles/bash_profile'
 alias refresh='source ~/dotfiles/bash_profile'
