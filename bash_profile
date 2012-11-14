@@ -54,15 +54,6 @@ alias up='cd ..'
 alias empty='popd && cd'
 
 
-#--Webserver-Aliases------------------------------------------------------------
-alias salm='ssh jzj2101@salm.dreamhost.com'
-alias pegasus='ssh honestfred@pegasus.dreamhost.com'
-alias spica='ssh circacmunny@spica.dreamhost.com'
-alias cunix='ssh jzj2101@cunix.cc.columbia.edu'
-alias clic='ssh jzj2101@clic-lab.cs.columbia.edu'
-alias jerusalem='ssh jzj2101@jerusalem.clic.cs.columbia.edu'
-
-
 #--Advanced-Programming---------------------------------------------------------
 alias lab1='cd ~/cs3157/lab1'
 alias lab2='cd ~/cs3157/lab2'

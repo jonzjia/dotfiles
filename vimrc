@@ -14,10 +14,12 @@ hi CursorColumn cterm=NONE ctermbg=17
 
 "Dark
 set background=light
-"hi CursorLine cterm=NONE ctermbg=17
-"hi CursorColumn cterm=NONE ctermbg=17
-
+set hidden
 colorscheme solarized
+
+
+" Get rid of errors
+set noerrorbells
 
 set encoding=utf-8
 set t_Co=256
@@ -36,12 +38,13 @@ set copyindent
 set preserveindent
 set softtabstop=0
 set shiftwidth=4
+set shiftround
 set tabstop=4
 set smarttab 
 set scrolloff=25 		"keep at least 25 lines above/below
 set undolevels=1000		"store up to 1000 undos
 set cul					"highlight current line
-set cuc					"hightlight column line as well. This is just kind of cool to watch...
+set cuc					"highlight column line as well. This is just kind of cool to watch...
 set mouse=a
 set wildmenu			"Really nice tab completion when using :b or :e
 filetype on 			"enable filetype detection
@@ -149,3 +152,7 @@ nnoremap H 0
 
 "LESS syntax
 au BufNewFile,BufRead *.less set filetype=less
+
+"Set Undo directory
+set undodir=~/.vim/undodir
+set undofile
