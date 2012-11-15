@@ -148,8 +148,8 @@ nnoremap H 0
 :nnoremap <leader>ls :!ls<cr>
 :nnoremap <leader>m :!make<cr>
 :nnoremap <leader>c :!make clean<cr>
-:nnoremap <leader>r :!./mdb-lookup my-mdb<cr>
-:nnoremap <leader>v :!valgrind --leak-check=yes ./mdb-lookup /home/jae/cs3157-pub/bin/mdb-cs3157<cr>
+:nnoremap <leader>r :!./http-client www.gnu.org 80 /software/make/manual/make.html<cr>
+:nnoremap <leader>v :!valgrind --leak-check=yes ./http-client www.gnu.org 80 /software/make/manual/make.html<cr>
 
 "LESS syntax
 au BufNewFile,BufRead *.less set filetype=less
