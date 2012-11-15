@@ -4,6 +4,7 @@ set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let mapleader = ","
 map \ :!
+nnoremap ; :
 
 "Colors
 
@@ -41,7 +42,7 @@ set shiftwidth=4
 set shiftround
 set tabstop=4
 set smarttab 
-set scrolloff=25 		"keep at least 25 lines above/below
+set scrolloff=15 		"keep at least 25 lines above/below
 set undolevels=1000		"store up to 1000 undos
 set cul					"highlight current line
 set cuc					"highlight column line as well. This is just kind of cool to watch...
@@ -156,3 +157,9 @@ au BufNewFile,BufRead *.less set filetype=less
 "Set Undo directory
 set undodir=~/.vim/undodir
 set undofile
+
+"Set Backup directory
+"Use trailing backslashes so that full path to file is saved; prevent
+"collisions
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
