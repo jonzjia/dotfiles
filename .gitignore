@@ -2,9 +2,9 @@
 vim/.netrwhist
 
 #Ignore undodir from other machines
-vim/undodir/
-vim/backup/
-vim/swp/
+vim/undodir/*
+vim/backup/*
+vim/swp/*
 
 # Ignore OS X's silly DS_Store
 .DS_Store
