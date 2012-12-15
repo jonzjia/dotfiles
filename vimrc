@@ -9,12 +9,12 @@ nnoremap ; :
 "Colors
 
 "Light
-"set background=light
+set background=light
 hi CursorLine cterm=NONE ctermbg=17
 hi CursorColumn cterm=NONE ctermbg=17
 
 "Dark
-set background=light
+"set background=dark
 set hidden
 colorscheme solarized
 
@@ -48,6 +48,7 @@ set cul					"highlight current line
 set cuc					"highlight column line as well. This is just kind of cool to watch...
 set mouse=a
 set wildmenu			"Really nice tab completion when using :b or :e
+set wildmode=list:full
 filetype on 			"enable filetype detection
 filetype indent on 		"enable filetype-specific indenting
 set preserveindent 		"save as much indent structure as possible
@@ -148,8 +149,8 @@ nnoremap H 0
 :nnoremap <leader>ls :!ls<cr>
 :nnoremap <leader>m :!make<cr>
 :nnoremap <leader>c :!make clean<cr>
-:nnoremap <leader>r :!./http-client www.gnu.org 80 /software/make/manual/make.html<cr>
-:nnoremap <leader>v :!valgrind --leak-check=yes ./http-client www.gnu.org 80 /software/make/manual/make.html<cr>
+:nnoremap <leader>r :!./strlist-test<cr>
+:nnoremap <leader>v :!valgrind --leak-check=yes ./strlist-test<cr>
 
 "LESS syntax
 au BufNewFile,BufRead *.less set filetype=less
