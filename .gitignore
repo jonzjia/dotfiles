@@ -6,6 +6,9 @@ vim/undodir/*
 vim/backup/*
 vim/swp/*
 
+#Ignore vitunes...
+vim/plugin/vitunes.vim
+
 # Ignore OS X's silly DS_Store
 .DS_Store
 
