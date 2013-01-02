@@ -1,39 +1,93 @@
-"Settings
-set nocompatible
-set laststatus=2
-let g:Powerline_symbols = 'fancy'
-let mapleader = ","
+"===============================================================================
+" Jon Jia's vimrc
+" TODO
+"	1. Tidy up
+"
+"===============================================================================
+
+
+"==Startup=Settings=============================================================
+set nocompatible					" don't worry about vi
+set noerrorbells					" silence bells
+let mapleader = ","					" set mapleader
+set laststatus=2					" always show the status-line
+
+
+"==Keyboard=Remaps==============================================================
+" Map to interact with terminal
 map \ :!
+" For lazy fingers
 nnoremap ; :
+" ls present directory
+nnoremap <leader>ls :!ls<cr>
+" clear out search highlights on pushing 'enter'
+nnoremap <cr> :noh<cr>
+" Sane movement in files with long lines
+nnoremap j gj
+nnoremap k gk
 
-"Colors
 
-"Light
+"==Colors=======================================================================
+colorscheme solarized
+"set background=dark
 set background=light
 hi CursorLine cterm=NONE ctermbg=17
 hi CursorColumn cterm=NONE ctermbg=17
 
-"Dark
-"set background=dark
-set hidden
-colorscheme solarized
+
+"==General=Settings=============================================================
+set number							" By default, show line numbers in code
+syntax on							" Who doesn't love syntax highlighting?
+set ruler							" Show where cursor is in body of text
+set spell							" Turn on spellcheck
+set spelllang=en					" Spell check in English...
+set scrolloff=15 					" keep at least 25 lines above/below
+set undolevels=1000					" store up to 1000 undos
+set cul								" highlight current line
+set cuc								" highlight current column
+set mouse=a							" Allow mouse to be used
+set wildmenu						" Really nice tab completion when issuing commands
+set hidden							" Not really sure what this does??
 
 
-" Get rid of errors
-set noerrorbells
+"==MacVim=======================================================================
+if has("gui_macvim")
+	set guioptions-=T
+	set guioptions-=r
+	set transparency=0
+	set guifont=Menlo\ Regular:h12
+endif
 
-set encoding=utf-8
-set t_Co=256
+
+"==Plugins======================================================================
 filetype plugin on
-set number
-syntax on
-set ruler
-set incsearch
-set hlsearch
-set spell
-set spelllang=en
-"clear out highlights left by search after pressing enter
-nnoremap <cr> :noh<cr>
+
+"--Powerline--------------------------------------------------------------------
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8				
+set t_Co=256						
+
+"--Syntastic--------------------------------------------------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_quiet_warnings=1
+
+
+"==Backup=&=Undo================================================================
+set undodir=~/.vim/undodir			"Set Undo directory
+set undofile
+"Use trailing backslashes so that the full path to file is saved
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
+
+
+"==Search=Settings==============================================================
+set incsearch						" Search while typing
+set hlsearch						" Highlight search results
+
 set noexpandtab
 set copyindent
 set preserveindent
@@ -42,12 +96,6 @@ set shiftwidth=4
 set shiftround
 set tabstop=4
 set smarttab 
-set scrolloff=15 		"keep at least 25 lines above/below
-set undolevels=1000		"store up to 1000 undos
-set cul					"highlight current line
-set cuc					"highlight column line as well. This is just kind of cool to watch...
-set mouse=a
-set wildmenu			"Really nice tab completion when using :b or :e
 set wildmode=list:full
 filetype on 			"enable filetype detection
 filetype indent on 		"enable filetype-specific indenting
@@ -58,20 +106,8 @@ set linebreak			"wrap the text when it hits the screen edge
 set ignorecase 			"ignore case when searching for things
 
 "Syntastic Settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_quiet_warnings=1
 
 "Macvim specific settings
-if has("gui_macvim")
-	set guioptions-=T
-	set guioptions-=r
-	set transparency=0
-	set guifont=Menlo\ Regular:h12
-endif
 
 "PROSE Settings
 autocmd BufRead *\.txt setlocal formatoptions=1
@@ -85,13 +121,13 @@ autocmd BufRead *\.markdown map k gk
 "Wrap text at 80 characters for text files
 autocmd Filetype text setlocal textwidth=80
 "Put a row of equal signs right underneath a line
-:nnoremap <leader>1 yypVr=
+nnoremap <leader>1 yypVr=
 "Put a row of minus signs for text files, then enter insert mode
-:nnoremap <leader>2 yypVr-o
+nnoremap <leader>2 yypVr-o
 "Wrap one line downwards of text to 80 characters
-:nnoremap <leader>f gq$
+nnoremap <leader>f gq$
 "Count the number of words
-:nnoremap <leader>w g<C-g>
+nnoremap <leader>w g<C-g>
 
 "Extensions
 :nnoremap <leader>n :NERDTreeToggle<CR>
@@ -105,14 +141,7 @@ autocmd Filetype text setlocal textwidth=80
 :nnoremap <space> zt
 
 
-"Sane movement in files with long lines
-nnoremap j gj
-nnoremap k gk
 
-"Edit vimrc file in a split window
-:nnoremap <leader>ev :split ~/dotfiles/vimrc<cr>
-"Source vimrc file
-:nnoremap <leader>sv :source ~/dotfiles/vimrc<cr>
 
 "Move to the beginning of the line
 nnoremap H 0
@@ -124,43 +153,49 @@ nnoremap H 0
 "Delete to the beginning of the line
 :nnoremap dH d0
 
-"Window Navigation
 
-"Toggle between windows
-:nnoremap <Tab> <C-W>w
 
-"Leader navigation
-:nnoremap <leader>h :wincmd h<cr>
-:nnoremap <leader>j :wincmd j<cr>
-:nnoremap <leader>k :wincmd k<cr>
-:nnoremap <leader>l :wincmd l<cr>
 
 "Can be combined with numbers to determine height/width of split
-"Split window vertically
-:nnoremap <Bar> <C-W>v<C-W><Right>
-"Split window horizontally 
-:nnoremap _ <C-W>s<C-W><Down>
 
 "Common abbreviations
 :iabbrev @@ jonzjia@gmail.com
 :iabbrev ccopy Copyright 2012 Jon Jia, all rights reserved
 
 "Commonly used external commands
-:nnoremap <leader>ls :!ls<cr>
-:nnoremap <leader>m :!make<cr>
-:nnoremap <leader>c :!make clean<cr>
-:nnoremap <leader>r :!./strlist-test<cr>
-:nnoremap <leader>v :!valgrind --leak-check=yes ./strlist-test<cr>
 
 "LESS syntax
 au BufNewFile,BufRead *.less set filetype=less
 
-"Set Undo directory
-set undodir=~/.vim/undodir
-set undofile
 
-"Set Backup directory
-"Use trailing backslashes so that full path to file is saved; prevent
-"collisions
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swp//
+
+"--Make-Settings----------------------------------------------------------------
+" make
+nnoremap <leader>m :!make<cr>
+" make clean
+nnoremap <leader>c :!make clean<cr>
+" run present project
+nnoremap <leader>r :!./strlist-test<cr>
+" run valgrind on present project
+nnoremap <leader>v :!valgrind --leak-check=yes ./strlist-test<cr>
+
+
+"==Window=Navigation============================================================
+" Split window vertically
+nnoremap <Bar> <C-W>v<C-W><Right>
+" Split window horizontally 
+nnoremap _ <C-W>s<C-W><Down>
+" toggle between windows
+nnoremap <Tab> <C-W>w
+" navigate through windows
+nnoremap <leader>h :wincmd h<cr>
+nnoremap <leader>j :wincmd j<cr>
+nnoremap <leader>k :wincmd k<cr>
+nnoremap <leader>l :wincmd l<cr>
+
+
+"==Meta=========================================================================
+" Edit vimrc file in a horizontal window
+nnoremap <leader>ev :split ~/dotfiles/vimrc<cr>
+" Source vimrc file
+nnoremap <leader>sv :source ~/dotfiles/vimrc<cr>

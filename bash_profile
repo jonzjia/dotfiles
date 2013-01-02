@@ -10,13 +10,6 @@ bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
 
 
-#--Update-Dotfiles--------------------------------------------------------------
-pushd .
-cd ~/dotfiles
-git pull
-popd
-
-
 #--Source-bashrc----------------------------------------------------------------
 source ~/.bashrc
 
@@ -31,7 +24,6 @@ alias ll='ls -alhF'
 alias la='ls -a'
 alias list='ls -1'
 alias back='cd -'
-
 
 
 #--vimrc------------------------------------------------------------------------
@@ -84,9 +76,18 @@ alias arthum='pushd . && open ~/Dropbox/[12x]/[ArtHum]/ && cd ~/Dropbox/[12x]/[A
 alias ap='pushd . && open ~/Dropbox/[12x]/[AP]/ && cd ~/Dropbox/[12x]/[AP]/'
 alias ui='pushd . && open ~/Dropbox/[12x]/[UI]/ && cd ~/Dropbox/[12x]/[UI]/'
 
+
+#--Update-Dotfiles--------------------------------------------------------------
+pushd .
+cd ~/dotfiles
+git pull
+popd
+
+
 #--RUBY-------------------------------------------------------------------------
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
 
 
 #-------------------------------------------------------------------------------
