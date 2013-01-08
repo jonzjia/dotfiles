@@ -32,8 +32,8 @@ export EDITOR=vim
 
 
 #--Common-Shortcuts-------------------------------------------------------------
-alias downloads='pushd . && open ~/Downloads'
-alias dl='open ~/Downloads'
+alias downloads='open ~/Downloads'
+alias dl='cd ~/Downloads'
 alias code='open ~/Dropbox/[CodeWorkspace]'
 alias projects='pushd . && open ~/Dropbox/Projects && cd ~/Dropbox/Projects/' 
 alias notes='cd ~/Dropbox/notes/ && vim ~/Dropbox/notes'
@@ -64,10 +64,22 @@ alias mv="mv -i $*"
 alias rm="rm -i $*"
 alias cp="cp -i $*"
 
+
 #--Academic-Aliases-------------------------------------------------------------
-alias classes='pushd . && open ~/Dropbox/\[12x\]/'
+alias ws='cd ~/Dropbox/[Workspace]/'
 alias workspace='pushd . && open ~/Dropbox/[Workspace]'
-alias ws='pushd . && cd ~/Dropbox/[Workspace]/'
+
+
+#--2013-Spring------------------------------------------------------------------
+alias 13y='cd ~/Dropbox/[13y]'
+alias ai='cd ~/Dropbox/[13y]/ai'
+alias majortexts='cd ~/Dropbox/[13y]/majortexts'
+alias musichum='cd ~/Dropbox/[13y]/musichum'
+alias plt='cd ~/Dropbox/[13y]/plt'
+alias theory='cd ~/Dropbox/[13y]/theory'
+
+
+#--2012-Fall------------------------------------------------------------------
 alias latin='pushd . && open ~/Dropbox/\[12x\]/\[LatinII\]/ && cd ~/Dropbox/[12x]/[LatinII]/'
 alias words='pushd . && cd ~/Dropbox/[12x]/[LatinII]/Words/ && ~/Dropbox/[12x]/[LatinII]/Words/words'
 alias fundamentals='pushd . && open ~/Dropbox/\[12x\]/\[Fund\]/ && cd ~/Dropbox/[12x]/[Fund]/'
