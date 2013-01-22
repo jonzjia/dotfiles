@@ -25,6 +25,7 @@ nnoremap <cr> :noh<cr>
 " Sane movement in files with long lines
 nnoremap j gj
 nnoremap k gk
+nnoremap <leader>~ :execute InvertBackground()<CR>
 
 
 "==Colors=======================================================================
@@ -107,8 +108,6 @@ set ignorecase 			"ignore case when searching for things
 
 "Syntastic Settings
 
-"Macvim specific settings
-
 "PROSE Settings
 autocmd BufRead *\.txt setlocal formatoptions=1
 autocmd BufRead *\.txt setlocal lbr
@@ -130,15 +129,15 @@ nnoremap <leader>f gq$
 nnoremap <leader>w g<C-g>
 
 "Extensions
-:nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 "Keyboard Remaps
 "pressing '+' will bring the current line down
-:nnoremap + ddp
+nnoremap + ddp
 "pressing '-' will bring the current line up
-:nnoremap - ddkP
+nnoremap - ddkP
 "pressing space will bring the current line to near the top
-:nnoremap <space> zt
+nnoremap <space> zt
 
 
 
@@ -199,3 +198,13 @@ nnoremap <leader>l :wincmd l<cr>
 nnoremap <leader>ev :split ~/dotfiles/vimrc<cr>
 " Source vimrc file
 nnoremap <leader>sv :source ~/dotfiles/vimrc<cr>
+
+
+"==Functions====================================================================
+:function! InvertBackground()
+:	if &bg=="light"
+:		se bg=dark
+:	else
+:		se bg=light
+:	endif
+:endfunction
