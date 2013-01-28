@@ -1,6 +1,4 @@
----
 Jon Jia's dotfiles
----
 
 Installation
 ============
@@ -20,4 +18,3 @@ Installation
 	./make.sh
 	```
 5. Success
-

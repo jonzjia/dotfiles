@@ -24,6 +24,7 @@ alias ll='ls -alhF'
 alias la='ls -a'
 alias list='ls -1'
 alias back='cd -'
+alias o='open .'
 
 
 #--vimrc------------------------------------------------------------------------
@@ -90,10 +91,7 @@ alias ui='pushd . && open ~/Dropbox/[12x]/[UI]/ && cd ~/Dropbox/[12x]/[UI]/'
 
 
 #--Update-Dotfiles--------------------------------------------------------------
-pushd .
-cd ~/dotfiles
-git pull
-popd
+alias update='pushd . && cd ~/dotfiles && git pull && popd'
 
 
 #--RUBY-------------------------------------------------------------------------
