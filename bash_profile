@@ -74,7 +74,7 @@ alias workspace='pushd . && open ~/Dropbox/[Workspace]'
 #--2013-Spring------------------------------------------------------------------
 alias 13y='cd ~/Dropbox/[13y]'
 alias ai='cd ~/Dropbox/[13y]/ai'
-alias majortexts='cd ~/Dropbox/[13y]/majortexts'
+alias postcolonial='cd ~/Dropbox/[13y]/postcolonial'
 alias musichum='cd ~/Dropbox/[13y]/musichum'
 alias plt='cd ~/Dropbox/[13y]/plt'
 alias theory='cd ~/Dropbox/[13y]/theory'

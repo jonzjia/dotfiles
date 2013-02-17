@@ -42,7 +42,7 @@ syntax on							" Who doesn't love syntax highlighting?
 set ruler							" Show where cursor is in body of text
 set spell							" Turn on spellcheck
 set spelllang=en					" Spell check in English...
-set scrolloff=15 					" keep at least 25 lines above/below
+set scrolloff=15 					" keep at least lines above/below
 set undolevels=1000					" store up to 1000 undos
 set cul								" highlight current line
 set cuc								" highlight current column
@@ -55,7 +55,7 @@ set hidden							" Not really sure what this does??
 if has("gui_macvim")
 	set guioptions-=T
 	set guioptions-=r
-	set transparency=0
+	set transparency=10
 	set guifont=Menlo\ Regular:h12
 endif
 
@@ -102,7 +102,7 @@ filetype on 			"enable filetype detection
 filetype indent on 		"enable filetype-specific indenting
 set preserveindent 		"save as much indent structure as possible
 set autoindent
-set clipboard+=unnamed	"make the vim clipboard accessible through multiple instances
+set clipboard=unnamedplus	"make the vim clipboard accessible through multiple instances
 set linebreak			"wrap the text when it hits the screen edge
 set ignorecase 			"ignore case when searching for things
 
@@ -112,6 +112,9 @@ set ignorecase 			"ignore case when searching for things
 autocmd BufRead *\.txt setlocal formatoptions=1
 autocmd BufRead *\.txt setlocal lbr
 autocmd BufRead *\.txt setlocal colorcolumn=80
+autocmd BufRead *\.md setlocal colorcolumn=80
+autocmd BufRead *\.rb setlocal colorcolumn=80
+autocmd BufRead *\.c setlocal colorcolumn=80
 "make it easier to move around in prose
 autocmd BufRead *\.txt map j gj
 autocmd BufRead *\.txt map k gk
@@ -168,11 +171,11 @@ au BufNewFile,BufRead *.less set filetype=less
 
 
 
-"--Make-Settings----------------------------------------------------------------
+"--Programming-Settings---------------------------------------------------------
 " make
 nnoremap <leader>m :!make<cr>
-" make clean
-nnoremap <leader>c :!make clean<cr>
+" run lisp on current file
+nnoremap <leader>c :!clisp %<cr>
 " run present project
 nnoremap <leader>r :!./strlist-test<cr>
 " run valgrind on present project
