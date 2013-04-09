@@ -5,7 +5,7 @@ export PATH="$HOME/local/bin:$PATH"
 
 #--Startup-Settings-------------------------------------------------------------
 export TERM=xterm-256color
-set -o vi
+#set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
 PS1="\w $ "
@@ -33,6 +33,7 @@ export EDITOR=vim
 
 
 #--Common-Shortcuts-------------------------------------------------------------
+alias sandbox='cd ~/Dropbox/dev/sandbox'
 alias downloads='open ~/Downloads'
 alias dl='cd ~/Downloads'
 alias code='open ~/Dropbox/[CodeWorkspace]'
@@ -48,18 +49,6 @@ alias empty='popd && cd'
 
 
 #--Advanced-Programming---------------------------------------------------------
-alias lab1='cd ~/cs3157/lab1'
-alias lab2='cd ~/cs3157/lab2'
-alias lab3='cd ~/cs3157/lab3'
-alias lab4='cd ~/cs3157/lab4'
-alias lab5='cd ~/cs3157/lab5'
-alias lab6='cd ~/cs3157/lab6'
-alias lab7='cd ~/cs3157/lab7'
-alias lab8='cd ~/cs3157/lab8'
-alias lab9='cd ~/cs3157/lab9'
-alias lab10='cd ~/cs3157/lab10'
-alias jae='cd /home/jae/cs3157-pub/bin/'
-ulimit -u 256
 # force mv, rm and cp to ask user before clobbering a file
 alias mv="mv -i $*"
 alias rm="rm -i $*"

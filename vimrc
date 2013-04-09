@@ -26,12 +26,15 @@ nnoremap <cr> :noh<cr>
 nnoremap j gj
 nnoremap k gk
 nnoremap <leader>~ :execute InvertBackground()<CR>
-
+"OS X style text deletion for alt and command in insert mode
+"inoremap <A-<BS>> <Esc>dBi 
+inoremap <D><BS> <Esc>0C
 
 "==Colors=======================================================================
 colorscheme solarized
 "set background=dark
-set background=light
+"set background=light
+set background=dark
 hi CursorLine cterm=NONE ctermbg=17
 hi CursorColumn cterm=NONE ctermbg=17
 
@@ -47,15 +50,18 @@ set undolevels=1000					" store up to 1000 undos
 set cul								" highlight current line
 set cuc								" highlight current column
 set mouse=a							" Allow mouse to be used
-set wildmenu						" Really nice tab completion when issuing commands
+set wildmenu						" tab completion for commands
 set hidden							" Not really sure what this does??
-
+set expandtab
+set showmatch
+set colorcolumn=80
 
 "==MacVim=======================================================================
 if has("gui_macvim")
 	set guioptions-=T
+	set guioptions-=L
 	set guioptions-=r
-	set transparency=10
+	set transparency=0
 	set guifont=Menlo\ Regular:h12
 endif
 
@@ -89,7 +95,6 @@ set directory=~/.vim/swp//
 set incsearch						" Search while typing
 set hlsearch						" Highlight search results
 
-set noexpandtab
 set copyindent
 set preserveindent
 set softtabstop=0
@@ -102,11 +107,8 @@ filetype on 			"enable filetype detection
 filetype indent on 		"enable filetype-specific indenting
 set preserveindent 		"save as much indent structure as possible
 set autoindent
-set clipboard=unnamedplus	"make the vim clipboard accessible through multiple instances
 set linebreak			"wrap the text when it hits the screen edge
 set ignorecase 			"ignore case when searching for things
-
-"Syntastic Settings
 
 "PROSE Settings
 autocmd BufRead *\.txt setlocal formatoptions=1
@@ -125,7 +127,9 @@ autocmd Filetype text setlocal textwidth=80
 "Put a row of equal signs right underneath a line
 nnoremap <leader>1 yypVr=
 "Put a row of minus signs for text files, then enter insert mode
-nnoremap <leader>2 yypVr-o
+nnoremap <leader>2 yypVr-
+"Put a row of tildes for text files, then enter insert mode
+nnoremap <leader>3 yypVr~
 "Wrap one line downwards of text to 80 characters
 nnoremap <leader>f gq$
 "Count the number of words
@@ -155,32 +159,26 @@ nnoremap H 0
 "Delete to the beginning of the line
 :nnoremap dH d0
 
-
-
-
-"Can be combined with numbers to determine height/width of split
-
-"Common abbreviations
-:iabbrev @@ jonzjia@gmail.com
-:iabbrev ccopy Copyright 2012 Jon Jia, all rights reserved
-
-"Commonly used external commands
-
 "LESS syntax
 au BufNewFile,BufRead *.less set filetype=less
 
+"==Ruby=========================================================================
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 
+"==Lisp=========================================================================
+autocmd Filetype lisp setlocal ts=2 sw=2 expandtab
+
+"==Scala========================================================================
+autocmd Filetype scala setlocal ts=2 sw=2 expandtab
+
+"==HTML=========================================================================
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
 "--Programming-Settings---------------------------------------------------------
 " make
 nnoremap <leader>m :!make<cr>
-" run lisp on current file
-nnoremap <leader>c :!clisp %<cr>
-" run present project
-nnoremap <leader>r :!./strlist-test<cr>
-" run valgrind on present project
-nnoremap <leader>v :!valgrind --leak-check=yes ./strlist-test<cr>
-
+" run the run.sh file for the project
+nnoremap <leader>r :!./run.sh<cr>
 
 "==Window=Navigation============================================================
 " Split window vertically
@@ -211,3 +209,13 @@ nnoremap <leader>sv :source ~/dotfiles/vimrc<cr>
 :		se bg=light
 :	endif
 :endfunction
+
+:function! Light()
+:   se bg=light
+:endfunction
+
+:function! Dark()
+:   se bg=dark
+:endfunction
+
+"==Aliases======================================================================
