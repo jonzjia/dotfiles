@@ -39,6 +39,7 @@ alias dl='cd ~/Downloads'
 alias code='open ~/Dropbox/[CodeWorkspace]'
 alias projects='pushd . && open ~/Dropbox/Projects && cd ~/Dropbox/Projects/' 
 alias notes='cd ~/Dropbox/notes/ && vim ~/Dropbox/notes'
+alias inspo='cd ~/Dropbox/[Pictures]/Inspiration/'
 
 
 #--Stack-Navigation-------------------------------------------------------------

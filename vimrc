@@ -2,6 +2,7 @@
 " Jon Jia's vimrc
 " TODO
 "	1. Tidy up
+"   2. Move things over to Vundle or Pathogen (ugh)
 "
 "===============================================================================
 
@@ -11,6 +12,18 @@ set nocompatible					" don't worry about vi
 set noerrorbells					" silence bells
 let mapleader = ","					" set mapleader
 set laststatus=2					" always show the status-line
+set showcmd                         " display incomplete commands
+set autochdir                       " directory changes depending on the file
+set noswapfile                      " stop vim's annoying swap files
+set nobackup
+set nowritebackup
+
+
+"==Meta=========================================================================
+" Edit vimrc file in a horizontal window
+nnoremap <leader>ev :split ~/dotfiles/vimrc<cr>
+" Source vimrc file
+nnoremap <leader>sv :source ~/dotfiles/vimrc<cr>
 
 
 "==Keyboard=Remaps==============================================================
@@ -18,22 +31,17 @@ set laststatus=2					" always show the status-line
 map \ :!
 " For lazy fingers
 nnoremap ; :
-" ls present directory
-nnoremap <leader>ls :!ls<cr>
-" clear out search highlights on pushing 'enter'
+" clear out search highlights 'enter'
 nnoremap <cr> :noh<cr>
+" reposition text on screen
+nnoremap <space> zt
 " Sane movement in files with long lines
 nnoremap j gj
 nnoremap k gk
 nnoremap <leader>~ :execute InvertBackground()<CR>
-"OS X style text deletion for alt and command in insert mode
-"inoremap <A-<BS>> <Esc>dBi 
-inoremap <D><BS> <Esc>0C
 
 "==Colors=======================================================================
 colorscheme solarized
-"set background=dark
-"set background=light
 set background=dark
 hi CursorLine cterm=NONE ctermbg=17
 hi CursorColumn cterm=NONE ctermbg=17
@@ -53,8 +61,9 @@ set mouse=a							" Allow mouse to be used
 set wildmenu						" tab completion for commands
 set hidden							" Not really sure what this does??
 set expandtab
-set showmatch
+set showmatch                       " highlight matching parens and brackets
 set colorcolumn=80
+
 
 "==MacVim=======================================================================
 if has("gui_macvim")
@@ -87,8 +96,6 @@ let g:syntastic_quiet_warnings=1
 set undodir=~/.vim/undodir			"Set Undo directory
 set undofile
 "Use trailing backslashes so that the full path to file is saved
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swp//
 
 
 "==Search=Settings==============================================================
@@ -144,7 +151,6 @@ nnoremap + ddp
 "pressing '-' will bring the current line up
 nnoremap - ddkP
 "pressing space will bring the current line to near the top
-nnoremap <space> zt
 
 
 
@@ -159,8 +165,11 @@ nnoremap H 0
 "Delete to the beginning of the line
 :nnoremap dH d0
 
-"LESS syntax
+"==LESS=========================================================================
 au BufNewFile,BufRead *.less set filetype=less
+
+"==Make=========================================================================
+autocmd FileType make setlocal noexpandtab
 
 "==Ruby=========================================================================
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
@@ -194,11 +203,6 @@ nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
 
 
-"==Meta=========================================================================
-" Edit vimrc file in a horizontal window
-nnoremap <leader>ev :split ~/dotfiles/vimrc<cr>
-" Source vimrc file
-nnoremap <leader>sv :source ~/dotfiles/vimrc<cr>
 
 
 "==Functions====================================================================
@@ -217,5 +221,11 @@ nnoremap <leader>sv :source ~/dotfiles/vimrc<cr>
 :function! Dark()
 :   se bg=dark
 :endfunction
+
+"==Aliases======================================================================
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 
 "==Aliases======================================================================
