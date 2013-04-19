@@ -13,7 +13,7 @@ set noerrorbells					" silence bells
 let mapleader = ","					" set mapleader
 set laststatus=2					" always show the status-line
 set showcmd                         " display incomplete commands
-set autochdir                       " directory changes depending on the file
+"set autochdir                       " directory changes depending on the file
 set noswapfile                      " stop vim's annoying swap files
 set nobackup
 set nowritebackup
@@ -67,6 +67,7 @@ set colorcolumn=80
 
 "==MacVim=======================================================================
 if has("gui_macvim")
+    colorscheme ir_dark
 	set guioptions-=T
 	set guioptions-=L
 	set guioptions-=r
@@ -188,6 +189,7 @@ autocmd Filetype html setlocal ts=2 sw=2 expandtab
 nnoremap <leader>m :!make<cr>
 " run the run.sh file for the project
 nnoremap <leader>r :!./run.sh<cr>
+nnoremap <leader>c :!make clean<cr>
 
 "==Window=Navigation============================================================
 " Split window vertically

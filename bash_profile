@@ -54,6 +54,8 @@ alias empty='popd && cd'
 alias mv="mv -i $*"
 alias rm="rm -i $*"
 alias cp="cp -i $*"
+alias m="make"
+alias c="make clean"
 
 
 #--Academic-Aliases-------------------------------------------------------------
