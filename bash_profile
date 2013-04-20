@@ -56,6 +56,7 @@ alias rm="rm -i $*"
 alias cp="cp -i $*"
 alias m="make"
 alias c="make clean"
+alias r="./run.sh"
 
 
 #--Academic-Aliases-------------------------------------------------------------

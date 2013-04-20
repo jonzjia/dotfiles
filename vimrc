@@ -67,7 +67,8 @@ set colorcolumn=80
 
 "==MacVim=======================================================================
 if has("gui_macvim")
-    colorscheme ir_dark
+    "colorscheme ir_dark
+    colorscheme molokai
 	set guioptions-=T
 	set guioptions-=L
 	set guioptions-=r
