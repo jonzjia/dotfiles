@@ -13,10 +13,10 @@ set noerrorbells					" silence bells
 let mapleader = ","					" set mapleader
 set laststatus=2					" always show the status-line
 set showcmd                         " display incomplete commands
-"set autochdir                       " directory changes depending on the file
+"set autochdir                      " directory changes depending on the file
 set noswapfile                      " stop vim's annoying swap files
-set nobackup
-set nowritebackup
+set nobackup                        " live dangerously
+set nowritebackup                   " see above
 
 
 "==Meta=========================================================================
@@ -68,6 +68,12 @@ set colorcolumn=80
 "==MacVim=======================================================================
 if has("gui_macvim")
     "colorscheme ir_dark
+    "colorscheme twilight
+    "colorscheme github256
+    "colorscheme iawriter
+    "colorscheme liquidcarbon
+    "colorscheme proton
+    "colorscheme wombat
     colorscheme molokai
 	set guioptions-=T
 	set guioptions-=L
@@ -120,17 +126,9 @@ set linebreak			"wrap the text when it hits the screen edge
 set ignorecase 			"ignore case when searching for things
 
 "PROSE Settings
-autocmd BufRead *\.txt setlocal formatoptions=1
-autocmd BufRead *\.txt setlocal lbr
-autocmd BufRead *\.txt setlocal colorcolumn=80
 autocmd BufRead *\.md setlocal colorcolumn=80
 autocmd BufRead *\.rb setlocal colorcolumn=80
 autocmd BufRead *\.c setlocal colorcolumn=80
-"make it easier to move around in prose
-autocmd BufRead *\.txt map j gj
-autocmd BufRead *\.txt map k gk
-autocmd BufRead *\.markdown map j gj
-autocmd BufRead *\.markdown map k gk
 "Wrap text at 80 characters for text files
 autocmd Filetype text setlocal textwidth=80
 "Put a row of equal signs right underneath a line

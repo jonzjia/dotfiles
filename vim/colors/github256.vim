@@ -287,6 +287,8 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 
 	call <SID>X("Cursor", "", "000000", "")
 	call <SID>X("CursorLine", "", "ffffcc", "none")
+	call <SID>X("CursorColumn", "", "ffffcc", "none")
+	call <SID>X("ColorColumn", "", "ffffcc", "none")
 	call <SID>X("Directory", "4183c4", "", "")
 "	call <SID>X("DiffAdd", "2E2E2E", "9CF9B1", "")
 "	call <SID>X("DiffDelete", "2E2E2E", "FFA296", "")

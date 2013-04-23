@@ -11,10 +11,11 @@ if exists("syntax_on")
   syntax reset
 endif
 
-set linespace=5
+"set linespace=5
 let g:colors_name="iawriter"
 
 hi Cursor       guifg=#ffffff   guibg=#990000 
+hi ColorColumn       guibg=grey86
 hi Normal       guifg=#424242   guibg=#f5f6f6          ctermfg=black    ctermbg=white
 hi DiffAdd                    guibg=#c0ffe0                           ctermbg=3
 hi DiffDelete   guifg=#ff8097 guibg=#ffe0f7          ctermfg=4        ctermbg=5
