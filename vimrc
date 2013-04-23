@@ -74,6 +74,7 @@ if has("gui_macvim")
     "colorscheme liquidcarbon
     "colorscheme proton
     "colorscheme wombat
+    "colorscheme gruvbox
     colorscheme molokai
 	set guioptions-=T
 	set guioptions-=L
