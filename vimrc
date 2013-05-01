@@ -38,7 +38,15 @@ nnoremap <space> zt
 " Sane movement in files with long lines
 nnoremap j gj
 nnoremap k gk
+"Move to the beginning of the line
+nnoremap H 0
+"Move to the end of the line
+nnoremap L $
+" Invert colors when I want
 nnoremap <leader>~ :execute InvertBackground()<CR>
+" Bring the current line up or down
+nnoremap + ddp
+nnoremap - ddkP
 
 "==Colors=======================================================================
 colorscheme solarized
@@ -51,8 +59,6 @@ hi CursorColumn cterm=NONE ctermbg=17
 set number							" By default, show line numbers in code
 syntax on							" Who doesn't love syntax highlighting?
 set ruler							" Show where cursor is in body of text
-set spell							" Turn on spellcheck
-set spelllang=en					" Spell check in English...
 set scrolloff=15 					" keep at least lines above/below
 set undolevels=1000					" store up to 1000 undos
 set cul								" highlight current line
@@ -68,14 +74,14 @@ set colorcolumn=80
 "==MacVim=======================================================================
 if has("gui_macvim")
     "colorscheme ir_dark
-    "colorscheme twilight
+    colorscheme twilight
     "colorscheme github256
     "colorscheme iawriter
     "colorscheme liquidcarbon
     "colorscheme proton
     "colorscheme wombat
     "colorscheme gruvbox
-    colorscheme molokai
+    "colorscheme molokai
     set vb
 	set guioptions-=T
 	set guioptions-=L
@@ -87,6 +93,9 @@ endif
 
 "==Plugins======================================================================
 filetype plugin on
+
+"--NERDTREE---------------------------------------------------------------------
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 "--Powerline--------------------------------------------------------------------
 let g:Powerline_symbols = 'fancy'
@@ -127,45 +136,6 @@ set autoindent
 set linebreak			"wrap the text when it hits the screen edge
 set ignorecase 			"ignore case when searching for things
 
-"PROSE Settings
-autocmd BufRead *\.md setlocal colorcolumn=80
-autocmd BufRead *\.rb setlocal colorcolumn=80
-autocmd BufRead *\.c setlocal colorcolumn=80
-"Wrap text at 80 characters for text files
-autocmd Filetype text setlocal textwidth=80
-"Put a row of equal signs right underneath a line
-nnoremap <leader>1 yypVr=
-"Put a row of minus signs for text files, then enter insert mode
-nnoremap <leader>2 yypVr-
-"Put a row of tildes for text files, then enter insert mode
-nnoremap <leader>3 yypVr~
-"Wrap one line downwards of text to 80 characters
-nnoremap <leader>f gq$
-"Count the number of words
-nnoremap <leader>w g<C-g>
-
-"Extensions
-nnoremap <leader>n :NERDTreeToggle<CR>
-
-"Keyboard Remaps
-"pressing '+' will bring the current line down
-nnoremap + ddp
-"pressing '-' will bring the current line up
-nnoremap - ddkP
-"pressing space will bring the current line to near the top
-
-
-
-
-"Move to the beginning of the line
-nnoremap H 0
-"Move to the end of the line
-:nnoremap L $
-
-"Delete to the end of the line
-:nnoremap dL d$
-"Delete to the beginning of the line
-:nnoremap dH d0
 
 "==LESS=========================================================================
 au BufNewFile,BufRead *.less set filetype=less
@@ -185,12 +155,27 @@ autocmd Filetype scala setlocal ts=2 sw=2 expandtab
 "==HTML=========================================================================
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
+"==PROSE========================================================================
+autocmd BufRead *\.md setlocal colorcolumn=80 textwidth=80
+autocmd Filetype text setlocal textwidth=80 spell spelllang=en
+"Put a row of equal signs right underneath a line
+nnoremap <leader>1 yypVr=
+"Put a row of minus signs for text files, then enter insert mode
+nnoremap <leader>2 yypVr-
+"Put a row of tildes for text files, then enter insert mode
+nnoremap <leader>3 yypVr~
+"Wrap one line downwards of text to 80 characters
+nnoremap <leader>f gq$
+"Count the number of words
+nnoremap <leader>w g<C-g>
+
 "--Programming-Settings---------------------------------------------------------
 " make
 nnoremap <leader>m :!make<cr>
+" make clean
+nnoremap <leader>c :!make clean<cr>
 " run the run.sh file for the project
 nnoremap <leader>r :!./run.sh<cr>
-nnoremap <leader>c :!make clean<cr>
 
 "==Window=Navigation============================================================
 " Split window vertically
@@ -204,8 +189,6 @@ nnoremap <leader>h :wincmd h<cr>
 nnoremap <leader>j :wincmd j<cr>
 nnoremap <leader>k :wincmd k<cr>
 nnoremap <leader>l :wincmd l<cr>
-
-
 
 
 "==Functions====================================================================
@@ -226,9 +209,10 @@ nnoremap <leader>l :wincmd l<cr>
 :endfunction
 
 "==Aliases======================================================================
+" Man up
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-"==Aliases======================================================================
+"===============================================================================
