@@ -74,7 +74,8 @@ set colorcolumn=80
 "==MacVim=======================================================================
 if has("gui_macvim")
     "colorscheme ir_dark
-    colorscheme twilight
+    "colorscheme solarized
+    "colorscheme twilight
     "colorscheme github256
     "colorscheme iawriter
     "colorscheme liquidcarbon
