@@ -8,7 +8,11 @@ export TERM=xterm-256color
 #set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
-PS1="\w $ "
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+source ~/.git-completion.sh
+source ~/.git-prompt.sh
+export PS1="\w $(__git_ps1 '[\[\e[0;32m\]%s\[\e[0m\]]')$ "
 
 #--Source-bashrc----------------------------------------------------------------
 source ~/.bashrc
