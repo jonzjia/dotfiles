@@ -141,6 +141,9 @@ set ignorecase 			"ignore case when searching for things
 "==LESS=========================================================================
 au BufNewFile,BufRead *.less set filetype=less
 
+"==C============================================================================
+autocmd Filetype c setlocal ts=2 sw=2 expandtab
+
 "==Make=========================================================================
 autocmd FileType make setlocal noexpandtab
 
