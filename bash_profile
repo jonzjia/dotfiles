@@ -8,11 +8,9 @@ export TERM=xterm-256color
 #set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-source ~/.git-completion.sh
-source ~/.git-prompt.sh
-export PS1="\w $(__git_ps1 '[\[\e[0;32m\]%s\[\e[0m\]]')$ "
+#export GIT_PS1_SHOWDIRTYSTATE=true
+#export GIT_PS1_SHOWUNTRACKEDFILES=true
+PS1="\w $ "
 
 #--Source-bashrc----------------------------------------------------------------
 source ~/.bashrc
@@ -100,3 +98,5 @@ alias update='pushd . && cd ~/dotfiles && git pull && popd'
 
 
 #-------------------------------------------------------------------------------
+
+
