@@ -8,8 +8,6 @@ export TERM=xterm-256color
 #set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
-#export GIT_PS1_SHOWDIRTYSTATE=true
-#export GIT_PS1_SHOWUNTRACKEDFILES=true
 PS1="\w $ "
 
 #--Source-bashrc----------------------------------------------------------------
@@ -30,6 +28,7 @@ alias o='open .'
 
 
 #--vimrc------------------------------------------------------------------------
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias vimrc='vim ~/dotfiles/vimrc'
 export EDITOR=vim
 
