@@ -17,6 +17,7 @@ set showcmd                         " display incomplete commands
 set noswapfile                      " stop vim's annoying swap files
 set nobackup                        " live dangerously
 set nowritebackup                   " see above
+set autoread                        " re-read file when switching branches
 
 
 "==Meta=========================================================================
@@ -42,11 +43,13 @@ nnoremap k gk
 nnoremap H 0
 "Move to the end of the line
 nnoremap L $
-" Invert colors when I want
+" Invert background when I want a change
 nnoremap <leader>~ :execute InvertBackground()<CR>
 " Bring the current line up or down
 nnoremap + ddp
 nnoremap - ddkP
+" Capitalize with Control-u
+nnoremap <C-u> ~
 
 "==Colors=======================================================================
 colorscheme solarized
@@ -83,6 +86,7 @@ if has("gui_macvim")
     "colorscheme wombat
     "colorscheme gruvbox
     "colorscheme molokai
+    colorscheme Tomorrow
     set vb
 	set guioptions-=T
 	set guioptions-=L
@@ -137,18 +141,23 @@ set autoindent
 set linebreak			"wrap the text when it hits the screen edge
 set ignorecase 			"ignore case when searching for things
 
+"==JS===========================================================================
+au FileType javascript nnoremap <buffer> <leader>, I//<esc>
 
 "==LESS=========================================================================
 au BufNewFile,BufRead *.less set filetype=less
 
 "==C============================================================================
 autocmd Filetype c setlocal ts=2 sw=2 expandtab
+autocmd Filetype cpp setlocal ts=2 sw=2 expandtab
+au FileType c nnoremap <buffer> <leader>, I//<esc>
 
 "==Make=========================================================================
 autocmd FileType make setlocal noexpandtab
 
 "==Ruby=========================================================================
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+au FileType ruby nnoremap <buffer> <leader>, I#<esc>
 
 "==Lisp=========================================================================
 autocmd Filetype lisp setlocal ts=2 sw=2 expandtab
@@ -158,6 +167,9 @@ autocmd Filetype scala setlocal ts=2 sw=2 expandtab
 
 "==HTML=========================================================================
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
+
+"==PYTHON=======================================================================
+au FileType python nnoremap <buffer> <leader>, I#<esc>
 
 "==PROSE========================================================================
 autocmd BufRead *\.md setlocal colorcolumn=80 textwidth=80
