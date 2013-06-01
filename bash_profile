@@ -90,6 +90,9 @@ alias ui='pushd . && open ~/Dropbox/[12x]/[UI]/ && cd ~/Dropbox/[12x]/[UI]/'
 alias update='pushd . && cd ~/dotfiles && git pull && popd'
 
 
+#--git-aliases------------------------------------------------------------------
+alias s='git status'
+
 #--RUBY-------------------------------------------------------------------------
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
