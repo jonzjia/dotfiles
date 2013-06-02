@@ -28,6 +28,7 @@ alias o='open .'
 
 
 #--vimrc------------------------------------------------------------------------
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias vimrc='vim ~/dotfiles/vimrc'
 export EDITOR=vim
 
@@ -40,6 +41,7 @@ alias code='open ~/Dropbox/[CodeWorkspace]'
 alias projects='pushd . && open ~/Dropbox/Projects && cd ~/Dropbox/Projects/' 
 alias notes='cd ~/Dropbox/notes/ && vim ~/Dropbox/notes'
 alias inspo='cd ~/Dropbox/[Pictures]/Inspiration/'
+alias images='cd ~/Dropbox/[Pictures]/Images/'
 
 
 #--Stack-Navigation-------------------------------------------------------------
@@ -56,6 +58,7 @@ alias rm="rm -i $*"
 alias cp="cp -i $*"
 alias m="make"
 alias c="make clean"
+alias v="mvim ."
 alias r="./run.sh"
 
 
@@ -94,3 +97,5 @@ alias update='pushd . && cd ~/dotfiles && git pull && popd'
 
 
 #-------------------------------------------------------------------------------
+
+
