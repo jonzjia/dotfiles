@@ -1,7 +1,8 @@
 #--PATH-------------------------------------------------------------------------
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/X11/bin:/usr/local/gnat/bin:/usr/local/share/npm/bin
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/X11/bin:/usr/local/gnat/bin:/usr/local/share/npm/bin:/usr/local/go/bin
 export PATH="$HOME/local/bin:$PATH"
-
+export GOPATH=$HOME/Dropbox/dev/go
+export PATH=$PATH:$GOPATH/bin
 
 #--Startup-Settings-------------------------------------------------------------
 export TERM=xterm-256color
@@ -12,7 +13,6 @@ PS1="\w $ "
 
 #--Source-bashrc----------------------------------------------------------------
 source ~/.bashrc
-
 
 #--Bash-Aliases-----------------------------------------------------------------
 alias profile='vim ~/dotfiles/bash_profile'
