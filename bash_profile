@@ -28,7 +28,6 @@ alias o='open .'
 
 
 #--vimrc------------------------------------------------------------------------
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias vimrc='vim ~/dotfiles/vimrc'
 export EDITOR=vim
 
@@ -64,8 +63,14 @@ alias r="./run.sh"
 
 #--Academic-Aliases-------------------------------------------------------------
 alias ws='cd ~/Dropbox/[Workspace]/'
-alias workspace='pushd . && open ~/Dropbox/[Workspace]'
 
+#--2013-Fall--------------------------------------------------------------------
+alias class='cd ~/Dropbox/13x'
+alias ce='cd ~/Dropbox/13x/ce'
+alias comedy='cd ~/Dropbox/13x/comedy'
+alias db='cd ~/Dropbox/13x/db'
+alias nlp='cd ~/Dropbox/13x/nlp'
+alias pps='cd ~/Dropbox/13x/pps'
 
 #--2013-Spring------------------------------------------------------------------
 alias 13y='cd ~/Dropbox/[13y]'
@@ -75,15 +80,14 @@ alias musichum='cd ~/Dropbox/[13y]/musichum'
 alias plt='cd ~/Dropbox/[13y]/plt'
 alias theory='cd ~/Dropbox/[13y]/theory'
 
-
 #--2012-Fall------------------------------------------------------------------
-alias latin='pushd . && open ~/Dropbox/\[12x\]/\[LatinII\]/ && cd ~/Dropbox/[12x]/[LatinII]/'
+#alias latin='pushd . && open ~/Dropbox/\[12x\]/\[LatinII\]/ && cd ~/Dropbox/[12x]/[LatinII]/'
 alias words='pushd . && cd ~/Dropbox/[12x]/[LatinII]/Words/ && ~/Dropbox/[12x]/[LatinII]/Words/words'
-alias fundamentals='pushd . && open ~/Dropbox/\[12x\]/\[Fund\]/ && cd ~/Dropbox/[12x]/[Fund]/'
-alias discrete='pushd . && open ~/Dropbox/[12x]/[Discrete]/ && cd ~/Dropbox/[12x]/[Discrete]/'
-alias arthum='pushd . && open ~/Dropbox/[12x]/[ArtHum]/ && cd ~/Dropbox/[12x]/[ArtHum]/'
-alias ap='pushd . && open ~/Dropbox/[12x]/[AP]/ && cd ~/Dropbox/[12x]/[AP]/'
-alias ui='pushd . && open ~/Dropbox/[12x]/[UI]/ && cd ~/Dropbox/[12x]/[UI]/'
+#alias fundamentals='pushd . && open ~/Dropbox/\[12x\]/\[Fund\]/ && cd ~/Dropbox/[12x]/[Fund]/'
+#alias discrete='pushd . && open ~/Dropbox/[12x]/[Discrete]/ && cd ~/Dropbox/[12x]/[Discrete]/'
+#alias arthum='pushd . && open ~/Dropbox/[12x]/[ArtHum]/ && cd ~/Dropbox/[12x]/[ArtHum]/'
+#alias ap='pushd . && open ~/Dropbox/[12x]/[AP]/ && cd ~/Dropbox/[12x]/[AP]/'
+#alias ui='pushd . && open ~/Dropbox/[12x]/[UI]/ && cd ~/Dropbox/[12x]/[UI]/'
 
 
 #--Update-Dotfiles--------------------------------------------------------------

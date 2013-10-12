@@ -1,6 +1,13 @@
 dotfiles
 ========
-Aww yeah, Jon Jia's dotfiles
+Aww yeah, Jon Jia's dotfiles. These dotfiles assume that you are Jon Jia and
+using a terminal that supports 256 colors...
+
+Prereqs
+=======
+- powerline compatible font
+- homebrew
+- 
 
 Installation
 ============
