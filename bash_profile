@@ -1,7 +1,8 @@
 #--PATH-------------------------------------------------------------------------
-export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/X11/bin:/usr/local/gnat/bin:/usr/local/share/npm/bin
+export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/X11/bin:/usr/local/gnat/bin:/usr/local/share/npm/bin:/usr/local/go/bin
 export PATH="$HOME/local/bin:$PATH"
-
+export GOPATH=$HOME/Dropbox/dev/go
+export PATH=$PATH:$GOPATH/bin
 
 #--Startup-Settings-------------------------------------------------------------
 export TERM=xterm-256color
@@ -12,7 +13,6 @@ PS1="\w $ "
 
 #--Source-bashrc----------------------------------------------------------------
 source ~/.bashrc
-
 
 #--Bash-Aliases-----------------------------------------------------------------
 alias profile='vim ~/dotfiles/bash_profile'
@@ -28,7 +28,6 @@ alias o='open .'
 
 
 #--vimrc------------------------------------------------------------------------
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias vimrc='vim ~/dotfiles/vimrc'
 export EDITOR=vim
 
@@ -64,8 +63,14 @@ alias r="./run.sh"
 
 #--Academic-Aliases-------------------------------------------------------------
 alias ws='cd ~/Dropbox/[Workspace]/'
-alias workspace='pushd . && open ~/Dropbox/[Workspace]'
 
+#--2013-Fall--------------------------------------------------------------------
+alias class='cd ~/Dropbox/13x'
+alias ce='cd ~/Dropbox/13x/ce'
+alias comedy='cd ~/Dropbox/13x/comedy'
+alias db='cd ~/Dropbox/13x/db'
+alias nlp='cd ~/Dropbox/13x/nlp'
+alias pps='cd ~/Dropbox/13x/pps'
 
 #--2013-Spring------------------------------------------------------------------
 alias 13y='cd ~/Dropbox/[13y]'
@@ -75,20 +80,22 @@ alias musichum='cd ~/Dropbox/[13y]/musichum'
 alias plt='cd ~/Dropbox/[13y]/plt'
 alias theory='cd ~/Dropbox/[13y]/theory'
 
-
 #--2012-Fall------------------------------------------------------------------
-alias latin='pushd . && open ~/Dropbox/\[12x\]/\[LatinII\]/ && cd ~/Dropbox/[12x]/[LatinII]/'
+#alias latin='pushd . && open ~/Dropbox/\[12x\]/\[LatinII\]/ && cd ~/Dropbox/[12x]/[LatinII]/'
 alias words='pushd . && cd ~/Dropbox/[12x]/[LatinII]/Words/ && ~/Dropbox/[12x]/[LatinII]/Words/words'
-alias fundamentals='pushd . && open ~/Dropbox/\[12x\]/\[Fund\]/ && cd ~/Dropbox/[12x]/[Fund]/'
-alias discrete='pushd . && open ~/Dropbox/[12x]/[Discrete]/ && cd ~/Dropbox/[12x]/[Discrete]/'
-alias arthum='pushd . && open ~/Dropbox/[12x]/[ArtHum]/ && cd ~/Dropbox/[12x]/[ArtHum]/'
-alias ap='pushd . && open ~/Dropbox/[12x]/[AP]/ && cd ~/Dropbox/[12x]/[AP]/'
-alias ui='pushd . && open ~/Dropbox/[12x]/[UI]/ && cd ~/Dropbox/[12x]/[UI]/'
+#alias fundamentals='pushd . && open ~/Dropbox/\[12x\]/\[Fund\]/ && cd ~/Dropbox/[12x]/[Fund]/'
+#alias discrete='pushd . && open ~/Dropbox/[12x]/[Discrete]/ && cd ~/Dropbox/[12x]/[Discrete]/'
+#alias arthum='pushd . && open ~/Dropbox/[12x]/[ArtHum]/ && cd ~/Dropbox/[12x]/[ArtHum]/'
+#alias ap='pushd . && open ~/Dropbox/[12x]/[AP]/ && cd ~/Dropbox/[12x]/[AP]/'
+#alias ui='pushd . && open ~/Dropbox/[12x]/[UI]/ && cd ~/Dropbox/[12x]/[UI]/'
 
 
 #--Update-Dotfiles--------------------------------------------------------------
 alias update='pushd . && cd ~/dotfiles && git pull && popd'
 
+
+#--git-aliases------------------------------------------------------------------
+alias s='git status'
 
 #--RUBY-------------------------------------------------------------------------
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

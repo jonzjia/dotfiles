@@ -88,6 +88,7 @@ if has("gui_macvim")
     "colorscheme molokai
     colorscheme Tomorrow
     set vb
+    set browsedir=buffer "gui opens current directory
 	set guioptions-=T
 	set guioptions-=L
 	set guioptions-=r
@@ -119,7 +120,6 @@ let g:syntastic_quiet_warnings=1
 "==Backup=&=Undo================================================================
 set undodir=~/.vim/undodir			"Set Undo directory
 set undofile
-"Use trailing backslashes so that the full path to file is saved
 
 
 "==Search=Settings==============================================================
@@ -134,6 +134,7 @@ set shiftround
 set tabstop=4
 set smarttab 
 set wildmode=list:full
+set wildignore=*.o,*.obj,*.bak,*.exe "tab complete ignores
 filetype on 			"enable filetype detection
 filetype indent on 		"enable filetype-specific indenting
 set preserveindent 		"save as much indent structure as possible
@@ -170,6 +171,9 @@ autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
 "==PYTHON=======================================================================
 au FileType python nnoremap <buffer> <leader>, I#<esc>
+
+"==Go===========================================================================
+au FileType go setlocal noexpandtab
 
 "==PROSE========================================================================
 autocmd BufRead *\.md setlocal colorcolumn=80 textwidth=80
@@ -226,9 +230,9 @@ nnoremap <leader>l :wincmd l<cr>
 
 "==Aliases======================================================================
 " Man up
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+nnoremap <Left> :echoe "Use h you bum"<CR>
+nnoremap <Right> :echoe "Use l you bum"<CR>
+nnoremap <Up> :echoe "Use k you bum"<CR>
+nnoremap <Down> :echoe "Use j you bum"<CR>
 
 "===============================================================================
