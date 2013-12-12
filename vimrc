@@ -2,13 +2,52 @@
 " Jon Jia's vimrc
 " TODO
 "	1. Tidy up
-"   2. Move things over to Vundle or Pathogen (ugh)
+"   2. Move things over to Vundle or Pathogen (ugh):
 "
 "===============================================================================
 
+"==Vundle-Settings==============================================================
+set nocompatible					" don't worry about vi
+filetype off                        " required for Vundle
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" required for Vundle
+Bundle 'gmark/vundle'               
+
+" Github Repos
+Bundle 'tpope/vim-fugitive'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'corntrace/bufexplorer'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'Lokaltog/powerline'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Shougo/neocomplcache.vim'
+Bundle 'kien/ctrlp.vim'
+
+" vim-scripts repos
+" Bundle 'FuzzyFinder'
+
+" non-Github repos
+" Bundle 'git://git.wincent.com/command-t.git'
+
+" Git repos on local machine (ie, when working on your own plugin)
+" Bundle '~/path/to/plugin'
+
+filetype plugin indent on           " required for Vundle
+
+"--Vundle-Help------------------------------------------------------------------
+" :BundleList                       - list configured bundles
+" :BundleInstall(!)                 - install (update) bundles
+" :BundleSearch(!) foo              - search (or refresh cache first) for foo
+" :BundleClean(!)                   - confirm (or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details
 
 "==Startup=Settings=============================================================
-set nocompatible					" don't worry about vi
 set noerrorbells					" silence bells
 let mapleader = ","					" set mapleader
 set laststatus=2					" always show the status-line
