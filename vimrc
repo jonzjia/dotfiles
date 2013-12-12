@@ -170,11 +170,16 @@ autocmd Filetype scala setlocal ts=2 sw=2 expandtab
 "==HTML=========================================================================
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
+"==PHP==========================================================================
+autocmd Filetype php setlocal ts=2 sw=2 expandtab
+
 "==PYTHON=======================================================================
 au FileType python nnoremap <buffer> <leader>, I#<esc>
 
 "==Go===========================================================================
 au FileType go setlocal noexpandtab
+":FMT will run go fmt on the current file
+:command FMT :!go fmt %
 
 "==PROSE========================================================================
 autocmd BufRead *\.md setlocal colorcolumn=80 textwidth=80
