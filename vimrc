@@ -2,6 +2,7 @@
 " Jon Jia's vimrc
 " TODO
 "	1. Tidy up
+"	2. Set up exuberant c-tags and tagbar
 "
 "===============================================================================
 
@@ -16,9 +17,14 @@ call vundle#rc()
 " required for Vundle
 Bundle 'gmark/vundle'
 
-" Github Repos
+"==Github-Repos=================================================================
+
+"--Colors-----------------------------------------------------------------------
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'sjl/badwolf'
+Bundle 'w0ng/vim-hybrid'
+
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
@@ -47,6 +53,8 @@ filetype plugin indent on           " required for Vundle
 " :BundleClean(!)                   - confirm (or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details
+
+
 
 "==Startup=Settings=============================================================
 let mapleader = ","					" set mapleader
