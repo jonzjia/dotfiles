@@ -91,7 +91,7 @@ nnoremap - ddkP
 nnoremap <C-u> ~
 
 "==Colors=======================================================================
-colorscheme solarized
+"colorscheme solarized
 set background=dark
 hi CursorLine cterm=NONE ctermbg=17
 hi CursorColumn cterm=NONE ctermbg=17
