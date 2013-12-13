@@ -2,7 +2,6 @@
 " Jon Jia's vimrc
 " TODO
 "	1. Tidy up
-"   2. Move things over to Vundle or Pathogen (ugh):
 "
 "===============================================================================
 
@@ -14,20 +13,20 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 " required for Vundle
-Bundle 'gmark/vundle'               
+Bundle 'gmark/vundle'
 
 " Github Repos
-Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
+Bundle 'tpope/vim-fugitive'
 Bundle 'corntrace/bufexplorer'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'Lokaltog/powerline'
+Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'kien/ctrlp.vim'
-
+"Bundle 'majutsushi/tagbar'
 " vim-scripts repos
 " Bundle 'FuzzyFinder'
 
@@ -87,10 +86,8 @@ nnoremap <leader>~ :execute InvertBackground()<CR>
 nnoremap <C-u> ~
 
 "==Colors=======================================================================
-"colorscheme solarized
+colorscheme solarized
 set background=dark
-hi CursorLine cterm=NONE ctermbg=17
-hi CursorColumn cterm=NONE ctermbg=17
 
 
 "==General=Settings=============================================================
@@ -111,24 +108,14 @@ set colorcolumn=80
 
 "==MacVim=======================================================================
 if has("gui_macvim")
-    "colorscheme ir_dark
-    "colorscheme solarized
-    "colorscheme twilight
-    "colorscheme github256
-    "colorscheme iawriter
-    "colorscheme liquidcarbon
-    "colorscheme proton
-    "colorscheme wombat
-    "colorscheme gruvbox
-    "colorscheme molokai
     colorscheme Tomorrow
     set vb
     set browsedir=buffer "gui opens current directory
-	set guioptions-=T
-	set guioptions-=L
-	set guioptions-=r
-	set transparency=0
-	set guifont=Menlo\ Regular:h12
+    set guioptions-=T
+    set guioptions-=L
+    set guioptions-=r
+    set transparency=0
+    set guifont=Menlo\ Regular:h12
 endif
 
 
@@ -138,10 +125,22 @@ endif
 nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
-"--Powerline--------------------------------------------------------------------
-let g:Powerline_symbols = 'fancy'
-set encoding=utf-8				
+"--vim-airline------------------------------------------------------------------
+let g:airline_theme             = 'powerlineish'
+let g:airline_enable_branch     = 1
+let g:airline_enable_syntastic  = 1
+let g:airline_left_sep          = '⮀'
+let g:airline_left_alt_sep      = '⮁'
+let g:airline_right_sep         = '⮂'
+let g:airline_right_alt_sep     = '⮃'
+let g:airline_branch_prefix     = '⭠'
+let g:airline_readonly_symbol   = '⭤'
+let g:airline_linecolumn_prefix = '⭡'
+"set encoding=utf-8				
 set t_Co=256						
+
+"--NeoComplCache----------------------------------------------------------------
+let g:neocomplcache_enable_at_startup = 1
 
 "--Syntastic--------------------------------------------------------------------
 set statusline+=%#warningmsg#
@@ -167,7 +166,7 @@ set softtabstop=0
 set shiftwidth=4
 set shiftround
 set tabstop=4
-set smarttab 
+set smarttab
 set wildmode=list:full
 set wildignore=*.o,*.obj,*.bak,*.exe "tab complete ignores
 set preserveindent 		"save as much indent structure as possible
@@ -211,7 +210,7 @@ au FileType python nnoremap <buffer> <leader>, I#<esc>
 "==Go===========================================================================
 au FileType go setlocal noexpandtab
 ":FMT will run go fmt on the current file
-:command FMT :!go fmt %
+":command FMT :!go fmt %
 
 "==PROSE========================================================================
 autocmd BufRead *\.md setlocal colorcolumn=80 textwidth=80
@@ -238,7 +237,7 @@ nnoremap <leader>r :!./run.sh<cr>
 "==Window=Navigation============================================================
 " Split window vertically
 nnoremap <Bar> <C-W>v<C-W><Right>
-" Split window horizontally 
+" Split window horizontally
 nnoremap _ <C-W>s<C-W><Down>
 " toggle between windows
 nnoremap <Tab> <C-W>w
