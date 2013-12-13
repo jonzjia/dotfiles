@@ -10,6 +10,7 @@ set nocompatible					" don't worry about vi
 filetype off                        " required for Vundle
 
 set rtp+=~/.vim/bundle/vundle
+let g:vundle_default_git_proto = 'git'
 call vundle#rc()
 
 " required for Vundle
