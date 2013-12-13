@@ -5,6 +5,7 @@ vim/.netrwhist
 vim/undodir/*
 vim/backup/*
 vim/swp/*
+vim/bundle
 
 # Ignore OS X's silly DS_Store
 .DS_Store
