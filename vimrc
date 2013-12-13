@@ -48,11 +48,10 @@ filetype plugin indent on           " required for Vundle
 " see :h vundle for more details
 
 "==Startup=Settings=============================================================
-set noerrorbells					" silence bells
 let mapleader = ","					" set mapleader
+set noerrorbells					" silence bells
 set laststatus=2					" always show the status-line
 set showcmd                         " display incomplete commands
-"set autochdir                      " directory changes depending on the file
 set noswapfile                      " stop vim's annoying swap files
 set nobackup                        " live dangerously
 set nowritebackup                   " see above
@@ -84,9 +83,6 @@ nnoremap H 0
 nnoremap L $
 " Invert background when I want a change
 nnoremap <leader>~ :execute InvertBackground()<CR>
-" Bring the current line up or down
-nnoremap + ddp
-nnoremap - ddkP
 " Capitalize with Control-u
 nnoremap <C-u> ~
 
@@ -137,7 +133,6 @@ endif
 
 
 "==Plugins======================================================================
-filetype plugin on
 
 "--NERDTREE---------------------------------------------------------------------
 nnoremap <leader>n :NERDTreeToggle<CR>
@@ -175,8 +170,6 @@ set tabstop=4
 set smarttab 
 set wildmode=list:full
 set wildignore=*.o,*.obj,*.bak,*.exe "tab complete ignores
-filetype on 			"enable filetype detection
-filetype indent on 		"enable filetype-specific indenting
 set preserveindent 		"save as much indent structure as possible
 set autoindent
 set linebreak			"wrap the text when it hits the screen edge
