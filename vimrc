@@ -26,7 +26,9 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'kien/ctrlp.vim'
 "Bundle 'majutsushi/tagbar'
+
 " vim-scripts repos
+Bundle 'bufexplorer.zip'
 " Bundle 'FuzzyFinder'
 
 " non-Github repos
