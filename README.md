@@ -1,13 +1,12 @@
 dotfiles
 ========
 Aww yeah, Jon Jia's dotfiles. These dotfiles assume that you are Jon Jia and
-using a terminal that supports 256 colors...
+using a terminal that supports 256 colors.
 
 Prereqs
 =======
-- powerline compatible font
-- homebrew
-- 
+- git
+- vim, preferably 7.0 or up
 
 Installation
 ============
@@ -17,8 +16,10 @@ Installation
 git clone git@github.com:jonzjia/dotfiles.git dotfiles
 ```
 3. Go into new dotfiles directory.
-4. Run the shell script. It will make symlinks of everything in dotfiles
+4. Run the shell script. It will make symlinks for everything in dotfiles. It
+   will also move all your old files over to a separate directory.
 ```
 ./make.sh
 ```
-5. Enjoy Jon Jia's dotfiles
+5. Fire up vim and run :BundleInstall
+6. Enjoy Jon Jia's dotfiles
