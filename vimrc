@@ -32,7 +32,7 @@ Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'kien/ctrlp.vim'
-"Bundle 'majutsushi/tagbar'
+Bundle 'majutsushi/tagbar'
 
 " vim-scripts repos
 Bundle 'bufexplorer.zip'
@@ -151,6 +151,12 @@ set t_Co=256
 
 "--NeoComplCache----------------------------------------------------------------
 let g:neocomplcache_enable_at_startup = 1
+" Tab completion!
+inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" Backspace and <C-h> in insert moder closes popup and deletes 1 char back
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+
 
 "--Syntastic--------------------------------------------------------------------
 set statusline+=%#warningmsg#
@@ -160,6 +166,9 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings=1
 
+"--TagBar-----------------------------------------------------------------------
+" TagBar is cool as shit. Use
+nnoremap <leader>t :TagbarToggle<CR>
 
 "==Backup=&=Undo================================================================
 set undodir=~/.vim/undodir			"Set Undo directory
