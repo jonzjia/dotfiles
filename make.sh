@@ -28,4 +28,4 @@ for file in $files; do
 done
 
 # Download vundle
-git clone git@github.com:gmarik/vundle.git '~/dotfiles/vim/bundle/'
+# git clone git@github.com:gmarik/vundle.git '~/dotfiles/vim/bundle/'

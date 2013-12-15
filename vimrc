@@ -25,6 +25,12 @@ Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'sjl/badwolf'
 Bundle 'w0ng/vim-hybrid'
 
+"--Syntax-----------------------------------------------------------------------
+Bundle 'tpope/vim-markdown'
+Bundle 'pangloss/vim-javascript'
+Bundle 'groenewege/vim-less'
+
+"--Useful-----------------------------------------------------------------------
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
@@ -36,7 +42,6 @@ Bundle 'majutsushi/tagbar'
 
 " vim-scripts repos
 Bundle 'bufexplorer.zip'
-" Bundle 'FuzzyFinder'
 
 " non-Github repos
 " Bundle 'git://git.wincent.com/command-t.git'
@@ -53,8 +58,6 @@ filetype plugin indent on           " required for Vundle
 " :BundleClean(!)                   - confirm (or auto-approve) removal of unused bundles
 "
 " see :h vundle for more details
-
-
 
 "==Startup=Settings=============================================================
 let mapleader = ","					" set mapleader
@@ -96,8 +99,8 @@ nnoremap <leader>~ :execute InvertBackground()<CR>
 nnoremap <C-u> ~
 
 "==Colors=======================================================================
-colorscheme solarized
-set background=dark
+colorscheme hybrid-light
+set background=light
 
 
 "==General=Settings=============================================================
@@ -118,7 +121,8 @@ set colorcolumn=80
 
 "==MacVim=======================================================================
 if has("gui_macvim")
-    colorscheme Tomorrow
+    colorscheme hybrid-light
+    set macmeta
     set vb
     set browsedir=buffer "gui opens current directory
     set guioptions-=T
@@ -150,6 +154,7 @@ let g:airline_linecolumn_prefix = '⭡'
 set t_Co=256						
 
 "--NeoComplCache----------------------------------------------------------------
+" Use neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 " Tab completion!
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
