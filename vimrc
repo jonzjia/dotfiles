@@ -24,6 +24,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'sjl/badwolf'
 Bundle 'w0ng/vim-hybrid'
+Bundle 'lsdr/monokai'
 
 "--Syntax-----------------------------------------------------------------------
 Bundle 'tpope/vim-markdown'
@@ -89,19 +90,21 @@ nnoremap <space> zt
 " Sane movement in files with long lines
 nnoremap j gj
 nnoremap k gk
-"Move to the beginning of the line
+" Move to the beginning of the line
 nnoremap H 0
-"Move to the end of the line
+" Move to the end of the line
 nnoremap L $
 " Invert background when I want a change
 nnoremap <leader>~ :execute InvertBackground()<CR>
 " Capitalize with Control-u
 nnoremap <C-u> ~
+" Emacs movement in commands
+cnoremap <C-a> <home>
+cnoremap <C-e> <end>
 
 "==Colors=======================================================================
-colorscheme hybrid-light
-set background=light
-
+colorscheme Tomorrow-Night
+set background=dark
 
 "==General=Settings=============================================================
 set number							" By default, show line numbers in code
@@ -118,11 +121,9 @@ set expandtab
 set showmatch                       " highlight matching parens and brackets
 set colorcolumn=80
 
-
 "==MacVim=======================================================================
 if has("gui_macvim")
     colorscheme hybrid-light
-    set macmeta
     set vb
     set browsedir=buffer "gui opens current directory
     set guioptions-=T
@@ -131,7 +132,6 @@ if has("gui_macvim")
     set transparency=0
     set guifont=Menlo\ Regular:h12
 endif
-
 
 "==Plugins======================================================================
 
@@ -161,7 +161,6 @@ inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 " Backspace and <C-h> in insert moder closes popup and deletes 1 char back
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-
 
 "--Syntastic--------------------------------------------------------------------
 set statusline+=%#warningmsg#
