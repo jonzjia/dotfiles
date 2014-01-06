@@ -25,6 +25,7 @@ Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'sjl/badwolf'
 Bundle 'w0ng/vim-hybrid'
 Bundle 'lsdr/monokai'
+Bundle 'nanotech/jellybeans.vim'
 
 "--Syntax-----------------------------------------------------------------------
 Bundle 'tpope/vim-markdown'
@@ -101,10 +102,16 @@ nnoremap <C-u> ~
 " Emacs movement in commands
 cnoremap <C-a> <home>
 cnoremap <C-e> <end>
+" tab maps
+map <C-Left> :tabp<CR>
+map <C-Right> :tabn<CR>
+map <C-t> :tabedit .<CR>:BufExplorer<CR>
+" del key acts wonky sometimes. this fixes it
+set backspace=indent,eol,start
 
 "==Colors=======================================================================
-colorscheme Tomorrow-Night
-set background=dark
+colorscheme hybrid-light
+set background=light
 
 "==General=Settings=============================================================
 set number							" By default, show line numbers in code
@@ -160,7 +167,7 @@ let g:neocomplcache_enable_at_startup = 1
 inoremap <expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 " Backspace and <C-h> in insert moder closes popup and deletes 1 char back
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+"inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 
 "--Syntastic--------------------------------------------------------------------
 set statusline+=%#warningmsg#
