@@ -1,0 +1,7 @@
+# Jon Jia's ackrc
+
+# always sort files
+--sort-files
+
+# always use color
+--color

@@ -7,7 +7,7 @@
 # Variables
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="vimrc tmux.conf bash_profile vim"    #list of files/folders to symlink
+files="vimrc tmux.conf bash_profile vim ackrc"    #list of files/folders to symlink
 
 # Create dotfiles_old in home directory
 echo "Creating $olddir for backup of any existing dotfiles in ~"
