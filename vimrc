@@ -97,8 +97,6 @@ nnoremap H 0
 nnoremap L $
 " Invert background when I want a change
 nnoremap <leader>~ :execute InvertBackground()<CR>
-" Capitalize with Control-u
-nnoremap <C-u> ~
 " Emacs movement in commands
 cnoremap <C-a> <home>
 cnoremap <C-e> <end>
@@ -108,6 +106,8 @@ map <C-Right> :tabn<CR>
 map <C-t> :tabedit .<CR>:BufExplorer<CR>
 " del key acts wonky sometimes. this fixes it
 set backspace=indent,eol,start
+
+nnoremap <F1> :execute FormatErr()<CR>
 
 "==Colors=======================================================================
 colorscheme hybrid-light
@@ -127,6 +127,12 @@ set hidden							" Not really sure what this does??
 set expandtab
 set showmatch                       " highlight matching parens and brackets
 set colorcolumn=80
+
+
+"==Folding======================================================================
+autocmd BufWrite * mkview
+autocmd BufRead * silent loadview
+
 
 "==MacVim=======================================================================
 if has("gui_macvim")
@@ -294,6 +300,11 @@ nnoremap <leader>l :wincmd l<cr>
 :function! Dark()
 :   se bg=dark
 :endfunction
+
+function! FormatErr()
+    silent :%s/#012/\r/g
+    silent :%s/^2014/\r2014/g
+endfunction
 
 "==Aliases======================================================================
 " Man up
