@@ -74,9 +74,11 @@ set autoread                        " re-read file when switching branches
 
 "==Meta=========================================================================
 " Edit vimrc file in a horizontal window
-nnoremap <leader>ev :split ~/dotfiles/vimrc<cr>
+nnoremap <leader>ev :split ~/dotfiles/vimrc<CR>
 " Source vimrc file
-nnoremap <leader>sv :source ~/dotfiles/vimrc<cr>
+nnoremap <leader>sv :source ~/dotfiles/vimrc<CR>
+" Open up scratch file for the given server
+nnoremap <leader>c :split ~/dotfiles/scratch<CR>
 
 
 "==Keyboard=Remaps==============================================================

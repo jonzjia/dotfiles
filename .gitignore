@@ -1,11 +1,15 @@
 # Ignore the stupid netrwhist file
 vim/.netrwhist
 
-#Ignore undodir from other machines
+# Ignore undodir from other machines
 vim/undodir/*
 vim/backup/*
 vim/swp/*
 vim/bundle
+vim/view
+
+# Ignore local scratch file
+scratch
 
 # Ignore OS X's silly DS_Store
 .DS_Store
