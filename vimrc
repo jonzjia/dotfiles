@@ -100,10 +100,6 @@ nnoremap <leader>~ :execute InvertBackground()<CR>
 " Emacs movement in commands
 cnoremap <C-a> <home>
 cnoremap <C-e> <end>
-" tab maps
-map <C-Left> :tabp<CR>
-map <C-Right> :tabn<CR>
-map <C-t> :tabedit .<CR>:BufExplorer<CR>
 " del key acts wonky sometimes. this fixes it
 set backspace=indent,eol,start
 
@@ -267,9 +263,9 @@ nnoremap <leader>w g<C-g>
 
 "--Programming-Settings---------------------------------------------------------
 " make
-nnoremap <leader>m :!make<cr>
+" nnoremap <leader>m :!make<cr>
 " make clean
-nnoremap <leader>c :!make clean<cr>
+" nnoremap <leader>c :!make clean<cr>
 " run the run.sh file for the project
 nnoremap <leader>r :!./run.sh<cr>
 
