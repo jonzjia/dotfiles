@@ -307,11 +307,5 @@ function! FormatErr()
     silent :%s/^2014/\r2014/g
 endfunction
 
-"==Aliases======================================================================
-" Man up
-nnoremap <Left> :echoe "Use h you bum"<CR>
-nnoremap <Right> :echoe "Use l you bum"<CR>
-nnoremap <Up> :echoe "Use k you bum"<CR>
-nnoremap <Down> :echoe "Use j you bum"<CR>
 
 "===============================================================================
