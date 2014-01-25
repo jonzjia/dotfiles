@@ -6,7 +6,7 @@ export GOPATH=$HOME/Dropbox/dev/go
 export PATH=$PATH:$GOPATH/bin
 
 #--Startup-Settings-------------------------------------------------------------
-export TERM=xterm-256color
+export TERM=screen-256color
 #set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
