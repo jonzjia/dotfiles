@@ -187,6 +187,9 @@ let g:syntastic_quiet_warnings=1
 " TagBar is cool as shit. Use
 nnoremap <leader>t :TagbarToggle<CR>
 
+"--BufExplorer------------------------------------------------------------------
+nnoremap <leader>be :BufExplorer<CR>
+
 "==Backup=&=Undo================================================================
 set undodir=~/.vim/undodir			"Set Undo directory
 set undofile
