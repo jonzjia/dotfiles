@@ -10,7 +10,31 @@ export TERM=screen-256color
 #set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
-PS1="\w $ "
+
+#--prompt-----------------------------------------------------------------------
+# need to source git-prompt.sh somewhere for this to work
+Color_Off="\[\033[0m\]"       # Text Reset
+Black="\[\033[0;30m\]"        # Black
+Green="\[\033[0;32m\]"        # Green
+Cyan="\[\033[0;36m\]"         # Cyan
+IRed="\[\033[0;91m\]"         # Red
+PathShort="\w"
+Time12h="\T"
+export PS1=$Cyan$PathShort$Color_Off'$(git branch &>/dev/null;\
+if [ $? -eq 0 ]; then \
+  echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
+  if [ "$?" -eq "0" ]; then \
+    # @4 - Clean repository - nothing to commit
+    echo "'$Green'"$(__git_ps1 " ⭠ %s"); \
+  else \
+    # @5 - Changes to working tree
+    echo "'$IRed'"$(__git_ps1 " ⭠ %s[+]"); \
+  fi) "; \
+#else \
+  # @2 - Prompt when not in GIT repo
+  #echo "'$Cyan$PathShort$Color_Off' "; \
+fi)'$Black$Time12h$Color_Off
+export PS1="$PS1\n$ "
 
 #--Source-bashrc----------------------------------------------------------------
 source ~/.bashrc
@@ -105,7 +129,5 @@ alias s='git status'
 
 
 #-------------------------------------------------------------------------------
-
-
 
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
