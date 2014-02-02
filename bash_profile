@@ -110,6 +110,15 @@ alias update='pushd . && cd ~/dotfiles && git pull && popd'
 #--git-aliases------------------------------------------------------------------
 alias s='git status'
 
+#--tmux-ssh-fix-----------------------------------------------------------------
+SOCK="/tmp/ssh-agent-$USER-tmux"
+if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]
+then
+    rm -f /tmp/ssh-agent-$USER-tmux
+    ln -sf $SSH_AUTH_SOCK $SOCK
+    export SSH_AUTH_SOCK=$SOCK
+fi
+
 #--RUBY-------------------------------------------------------------------------
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
