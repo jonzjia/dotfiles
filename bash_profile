@@ -25,15 +25,16 @@ if [ $? -eq 0 ]; then \
   echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
   if [ "$?" -eq "0" ]; then \
     # @4 - Clean repository - nothing to commit
-    echo "'$Green'"$(__git_ps1 " ⭠ %s"); \
+    echo " on '$Green'"$(__git_ps1 "⭠ %s")" '$Black$Time12h$Color_Off'"; \
   else \
     # @5 - Changes to working tree
-    echo "'$IRed'"$(__git_ps1 " ⭠ %s[+]"); \
+    echo " on '$IRed'"$(__git_ps1 "⭠ %s[+]")" '$Black$Time12h$Color_Off'"; \
   fi) "; \
-#else \
-  # @2 - Prompt when not in GIT repo
-  #echo "'$Cyan$PathShort$Color_Off' "; \
-fi)'$Black$Time12h$Color_Off
+else \
+   # @2 - Prompt when not in GIT repo
+  echo " '$Black$Time12h$Color_Off'"; \
+fi)'
+  #$Black$Time12h$Color_Off
 export PS1="$PS1\n$ "
 
 #--Source-bashrc----------------------------------------------------------------
@@ -80,11 +81,6 @@ alias empty='popd && cd'
 alias mv="mv -i $*"
 alias rm="rm -i $*"
 alias cp="cp -i $*"
-alias m="make"
-alias c="make clean"
-alias v="mvim ."
-alias r="./run.sh"
-
 
 #--Academic-Aliases-------------------------------------------------------------
 alias ws='cd ~/Dropbox/[Workspace]/'
@@ -106,18 +102,10 @@ alias plt='cd ~/Dropbox/[13y]/plt'
 alias theory='cd ~/Dropbox/[13y]/theory'
 
 #--2012-Fall------------------------------------------------------------------
-#alias latin='pushd . && open ~/Dropbox/\[12x\]/\[LatinII\]/ && cd ~/Dropbox/[12x]/[LatinII]/'
 alias words='pushd . && cd ~/Dropbox/[12x]/[LatinII]/Words/ && ~/Dropbox/[12x]/[LatinII]/Words/words'
-#alias fundamentals='pushd . && open ~/Dropbox/\[12x\]/\[Fund\]/ && cd ~/Dropbox/[12x]/[Fund]/'
-#alias discrete='pushd . && open ~/Dropbox/[12x]/[Discrete]/ && cd ~/Dropbox/[12x]/[Discrete]/'
-#alias arthum='pushd . && open ~/Dropbox/[12x]/[ArtHum]/ && cd ~/Dropbox/[12x]/[ArtHum]/'
-#alias ap='pushd . && open ~/Dropbox/[12x]/[AP]/ && cd ~/Dropbox/[12x]/[AP]/'
-#alias ui='pushd . && open ~/Dropbox/[12x]/[UI]/ && cd ~/Dropbox/[12x]/[UI]/'
-
 
 #--Update-Dotfiles--------------------------------------------------------------
 alias update='pushd . && cd ~/dotfiles && git pull && popd'
-
 
 #--git-aliases------------------------------------------------------------------
 alias s='git status'
@@ -126,8 +114,5 @@ alias s='git status'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-
-
 #-------------------------------------------------------------------------------
-
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
