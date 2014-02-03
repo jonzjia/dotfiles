@@ -11,6 +11,20 @@ export TERM=screen-256color
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
 
+#--axial-profile-settings-------------------------------------------------------
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 #--prompt-----------------------------------------------------------------------
 # need to source git-prompt.sh somewhere for this to work
 Color_Off="\[\033[0m\]"       # Text Reset
