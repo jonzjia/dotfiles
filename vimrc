@@ -108,7 +108,7 @@ set backspace=indent,eol,start
 nnoremap <F1> :execute FormatErr()<CR>
 
 "==Colors=======================================================================
-colorscheme hybrid-light
+colorscheme hybrid
 set background=light
 
 "==General=Settings=============================================================

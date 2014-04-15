@@ -1,12 +1,12 @@
 #--PATH-------------------------------------------------------------------------
 #export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/X11/bin:/usr/local/gnat/bin:/usr/local/share/npm/bin:/usr/local/go/bin
-export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin:/usr/local/gnat/bin:/usr/local/share/npm/bin:/usr/local/go/bin
-export PATH="$HOME/local/bin:$PATH"
-export GOPATH=$HOME/Dropbox/dev/go
-export PATH=$PATH:$GOPATH/bin
+#export PATH=/usr/local/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin:/usr/local/gnat/bin:/usr/local/share/npm/bin:/usr/local/go/bin
+#export PATH="$HOME/local/bin:$PATH"
+#export GOPATH=$HOME/Dropbox/dev/go
+#export PATH=$PATH:$GOPATH/bin
 
 #--Startup-Settings-------------------------------------------------------------
-export TERM=screen-256color
+#export TERM=screen-256color
 #set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
@@ -25,9 +25,11 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+source ~/.git-prompt.sh
 #--prompt-----------------------------------------------------------------------
 # need to source git-prompt.sh somewhere for this to work
-Color_Off="\[\033[0m\]"       # Text Reset
+<<'COMMENT'
+Color_Off="\[\033[00m\]"       # Text Reset
 Black="\[\033[0;30m\]"        # Black
 Green="\[\033[0;32m\]"        # Green
 Cyan="\[\033[0;36m\]"         # Cyan
@@ -48,8 +50,8 @@ else \
    # @2 - Prompt when not in GIT repo
   echo " '$Black$Time12h$Color_Off'"; \
 fi)'
-  #$Black$Time12h$Color_Off
 export PS1="$PS1\n$ "
+COMMENT
 
 #--Source-bashrc----------------------------------------------------------------
 source ~/.bashrc
@@ -59,7 +61,7 @@ alias profile='vim ~/dotfiles/bash_profile'
 alias refresh='source ~/dotfiles/bash_profile'
 alias dotfiles='cd ~/dotfiles'
 alias k='clear'
-alias ls='ls -G'
+alias ls='ls --color=auto'
 alias ll='ls -alhF'
 alias la='ls -a'
 alias list='ls -1'
