@@ -106,9 +106,10 @@ cnoremap <C-e> <end>
 set backspace=indent,eol,start
 
 nnoremap <F1> :execute FormatErr()<CR>
+nnoremap <F2> :execute JSONFormat()<CR>
 
 "==Colors=======================================================================
-colorscheme hybrid
+colorscheme Tomorrow-Night-Bright
 set background=light
 
 "==General=Settings=============================================================
@@ -130,6 +131,9 @@ set colorcolumn=80
 "==Folding======================================================================
 autocmd BufWrite * mkview
 autocmd BufRead * silent loadview
+set foldcolumn=1
+" toggle paste mode
+nnoremap <Leader>p :set paste! number!<CR>
 
 
 "==MacVim=======================================================================
@@ -307,5 +311,9 @@ function! FormatErr()
     silent :%s/^2014/\r2014/g
 endfunction
 
+" naively pretty print the current line as json
+function! JSONFormat()
+    silent :s/, /, \r/g
+endfunction
 
 "===============================================================================
