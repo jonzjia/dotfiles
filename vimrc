@@ -133,7 +133,7 @@ autocmd BufWrite * mkview
 autocmd BufRead * silent loadview
 set foldcolumn=1
 " toggle paste mode
-nnoremap <Leader>p :set paste! number!<CR>
+nnoremap <Leader>p :set paste! number!<CR> :call FoldColumnToggle()<CR>
 
 
 "==MacVim=======================================================================
@@ -316,4 +316,12 @@ function! JSONFormat()
     silent :s/, /, \r/g
 endfunction
 
+" toggle fold column
+function! FoldColumnToggle()
+    if &foldcolumn
+        setlocal foldcolumn=0
+    else
+        setlocal foldcolumn=2
+    endif
+endfunction
 "===============================================================================
