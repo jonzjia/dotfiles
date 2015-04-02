@@ -2,7 +2,6 @@
 " Jon Jia's vimrc
 " TODO
 "	1. Tidy up
-"	2. Set up exuberant c-tags and tagbar
 "
 "===============================================================================
 
@@ -114,8 +113,8 @@ syntax on							" Who doesn't love syntax highlighting?
 set ruler							" Show where cursor is in body of text
 set scrolloff=15 					" keep at least lines above/below
 set undolevels=1000					" store up to 1000 undos
-set cul								" highlight current line
-set cuc								" highlight current column
+set cursorline						" highlight current line
+set cursorcolumn					" highlight current column
 set mouse=a							" Allow mouse to be used
 set wildmenu						" tab completion for commands
 set hidden							" Not really sure what this does??
@@ -185,10 +184,6 @@ let g:syntastic_check_on_wq = 0
 "let g:syntastic_enable_signs=1
 "let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
-
-"--TagBar-----------------------------------------------------------------------
-" TagBar is cool as shit. Use
-nnoremap <leader>t :TagbarToggle<CR>
 
 "--BufExplorer------------------------------------------------------------------
 nnoremap <leader>be :BufExplorer<CR>
