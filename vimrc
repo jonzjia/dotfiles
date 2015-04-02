@@ -10,12 +10,11 @@
 set nocompatible					" don't worry about vi
 filetype off                        " required for Vundle
 
-set rtp+=~/.vim/bundle/vundle
-let g:vundle_default_git_proto = 'git'
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " required for Vundle
-Bundle 'gmark/vundle'
+Bundle 'gmarik/Vundle.vim'
 
 "==Github-Repos=================================================================
 
@@ -41,6 +40,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'junegunn/goyo.vim'
 
 " vim-scripts repos
 Bundle 'bufexplorer.zip'
@@ -51,6 +51,7 @@ Bundle 'bufexplorer.zip'
 " Git repos on local machine (ie, when working on your own plugin)
 " Bundle '~/path/to/plugin'
 
+call vundle#end()
 filetype plugin indent on           " required for Vundle
 
 "--Vundle-Help------------------------------------------------------------------
