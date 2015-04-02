@@ -22,9 +22,6 @@ Bundle 'gmarik/Vundle.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'sjl/badwolf'
-Bundle 'w0ng/vim-hybrid'
-Bundle 'lsdr/monokai'
-Bundle 'nanotech/jellybeans.vim'
 
 "--Syntax-----------------------------------------------------------------------
 Bundle 'tpope/vim-markdown'
@@ -36,10 +33,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'majutsushi/tagbar'
 Bundle 'junegunn/goyo.vim'
 
 " vim-scripts repos
@@ -156,18 +151,22 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 "--vim-airline------------------------------------------------------------------
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
 let g:airline_theme             = 'powerlineish'
-let g:airline_enable_branch     = 1
-let g:airline_enable_syntastic  = 1
+let g:airline#extensions#branch#enabled     = 1
+let g:airline#extensions#syntastic#enabled  = 1
 let g:airline_left_sep          = '⮀'
 let g:airline_left_alt_sep      = '⮁'
 let g:airline_right_sep         = '⮂'
 let g:airline_right_alt_sep     = '⮃'
-let g:airline_branch_prefix     = '⭠'
-let g:airline_readonly_symbol   = '⭤'
-let g:airline_linecolumn_prefix = '⭡'
-"set encoding=utf-8				
-set t_Co=256						
+let g:airline_symbols.branch     = '⭠'
+let g:airline_symbols.readonly   = '⭤'
+let g:airline_symbols.linenr = '⭡'
+"set encoding=utf-8
+set t_Co=256
 
 "--NeoComplCache----------------------------------------------------------------
 " Use neocomplcache
