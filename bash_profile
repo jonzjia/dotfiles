@@ -10,6 +10,7 @@
 #set -o vi
 bind "set completion-ignore-case on" 	#ignore case in tab-completion
 bind "set show-all-if-ambiguous On"		#automatically show all tab complete options
+export PAGER=less
 
 #--axial-profile-settings-------------------------------------------------------
 # if running bash

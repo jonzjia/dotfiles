@@ -109,7 +109,7 @@ nnoremap <F1> :execute FormatErr()<CR>
 nnoremap <F2> :execute JSONFormat()<CR>
 
 "==Colors=======================================================================
-colorscheme Tomorrow-Night-Bright
+colorscheme Tomorrow
 set background=light
 
 "==General=Settings=============================================================
