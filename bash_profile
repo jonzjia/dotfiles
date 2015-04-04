@@ -51,7 +51,7 @@ else \
    # @2 - Prompt when not in GIT repo
   echo " '$Black$Time12h$Color_Off'"; \
 fi)'
-export PS1="$PS1\n$ "
+export PS1="\n$PS1\n$ "
 
 #--Source-bashrc----------------------------------------------------------------
 source ~/.bashrc
