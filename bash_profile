@@ -30,7 +30,6 @@ source ~/.git-prompt.sh
 
 #--prompt-----------------------------------------------------------------------
 # need to source git-prompt.sh somewhere for this to work
-<<'COMMENT'
 Color_Off="\[\033[00m\]"       # Text Reset
 Black="\[\033[0;30m\]"        # Black
 Green="\[\033[0;32m\]"        # Green
@@ -53,7 +52,6 @@ else \
   echo " '$Black$Time12h$Color_Off'"; \
 fi)'
 export PS1="$PS1\n$ "
-COMMENT
 
 #--Source-bashrc----------------------------------------------------------------
 source ~/.bashrc
