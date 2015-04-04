@@ -27,6 +27,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 source ~/.git-prompt.sh
+
 #--prompt-----------------------------------------------------------------------
 # need to source git-prompt.sh somewhere for this to work
 <<'COMMENT'
@@ -57,12 +58,9 @@ COMMENT
 #--Source-bashrc----------------------------------------------------------------
 source ~/.bashrc
 
+
 #--Bash-Aliases-----------------------------------------------------------------
-alias profile='vim ~/dotfiles/bash_profile'
-alias refresh='source ~/dotfiles/bash_profile'
-alias dotfiles='cd ~/dotfiles'
-alias k='clear'
-alias ls='ls --color=auto'
+alias ls='ls -G'
 alias ll='ls -alhF'
 alias la='ls -a'
 alias list='ls -1'
@@ -77,20 +75,7 @@ export EDITOR=vim
 
 #--Common-Shortcuts-------------------------------------------------------------
 alias sandbox='cd ~/Dropbox/dev/sandbox'
-alias downloads='open ~/Downloads'
 alias dl='cd ~/Downloads'
-alias code='open ~/Dropbox/[CodeWorkspace]'
-alias projects='pushd . && open ~/Dropbox/Projects && cd ~/Dropbox/Projects/'
-alias notes='cd ~/Dropbox/notes/ && vim ~/Dropbox/notes'
-alias inspo='cd ~/Dropbox/[Pictures]/Inspiration/'
-alias images='cd ~/Dropbox/[Pictures]/Images/'
-
-
-#--Stack-Navigation-------------------------------------------------------------
-alias stack='dirs -v'
-alias pushdthis='pushd .'
-alias up='cd ..'
-alias empty='popd && cd'
 
 
 #--Advanced-Programming---------------------------------------------------------
@@ -99,33 +84,10 @@ alias mv="mv -i $*"
 alias rm="rm -i $*"
 alias cp="cp -i $*"
 
-#--Academic-Aliases-------------------------------------------------------------
-alias ws='cd ~/Dropbox/[Workspace]/'
-
-#--2013-Fall--------------------------------------------------------------------
-alias class='cd ~/Dropbox/13x'
-alias ce='cd ~/Dropbox/13x/ce'
-alias comedy='cd ~/Dropbox/13x/comedy'
-alias db='cd ~/Dropbox/13x/db'
-alias nlp='cd ~/Dropbox/13x/nlp'
-alias pps='cd ~/Dropbox/13x/pps'
-
-#--2013-Spring------------------------------------------------------------------
-alias 13y='cd ~/Dropbox/[13y]'
-alias ai='cd ~/Dropbox/[13y]/ai'
-alias postcolonial='cd ~/Dropbox/[13y]/postcolonial'
-alias musichum='cd ~/Dropbox/[13y]/musichum'
-alias plt='cd ~/Dropbox/[13y]/plt'
-alias theory='cd ~/Dropbox/[13y]/theory'
 
 #--2012-Fall------------------------------------------------------------------
 alias words='pushd . && cd ~/Dropbox/[12x]/[LatinII]/Words/ && ~/Dropbox/[12x]/[LatinII]/Words/words'
 
-#--Update-Dotfiles--------------------------------------------------------------
-alias update='pushd . && cd ~/dotfiles && git pull && popd'
-
-#--git-aliases------------------------------------------------------------------
-alias s='git status'
 
 #--tmux-ssh-fix-----------------------------------------------------------------
 SOCK="/tmp/ssh-agent-$USER-tmux"
