@@ -1,0 +1,13 @@
+[user]
+     name = jonzjia
+     email = jonzjia@gmail.com
+
+[push]
+    default = matching
+
+[alias]
+    co = checkout
+    feap = fetch --all --prune
+
+[merge]
+    conflictstyle = diff3
