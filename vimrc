@@ -84,7 +84,7 @@ nnoremap ; :
 " clear out search highlights 'enter'
 nnoremap <cr> :noh<cr>
 " reposition text on screen
-nnoremap <space> zt
+nnoremap <Leader><space> zt
 " Sane movement in files with long lines
 nnoremap j gj
 nnoremap k gk
@@ -114,7 +114,7 @@ set ruler							" Show where cursor is in body of text
 set scrolloff=15 					" keep at least lines above/below
 set undolevels=1000					" store up to 1000 undos
 set cursorline						" highlight current line
-set cursorcolumn					" highlight current column
+" set cursorcolumn					" highlight current column
 set mouse=a							" Allow mouse to be used
 set wildmenu						" tab completion for commands
 set hidden							" Not really sure what this does??
@@ -124,9 +124,13 @@ set colorcolumn=80
 
 
 "==Folding======================================================================
+set foldmethod=marker
+nnoremap <space> za
 autocmd BufWrite * mkview
 autocmd BufRead * silent loadview
-set foldcolumn=1
+set foldcolumn=4
+" make it super simple to add a fold
+ab FOLD -- {{{<CR><CR>-- }}}
 " toggle paste mode
 nnoremap <Leader>p :set paste! number!<CR> :call FoldColumnToggle()<CR>
 
@@ -317,7 +321,7 @@ function! FoldColumnToggle()
     if &foldcolumn
         setlocal foldcolumn=0
     else
-        setlocal foldcolumn=2
+        setlocal foldcolumn=4
     endif
 endfunction
 "===============================================================================
