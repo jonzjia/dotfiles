@@ -28,7 +28,7 @@ for file in $files; do
 done
 
 # Download vundle
-# $ git clone https://github.com/gmarik/vundle.git '~/dotfiles/vim/bundle/vundle'
+# $ git clone http://github.com/gmarik/vundle.git ~/.vim/vundle.git
 
 # Install plugins
 # $ vim .

@@ -9,8 +9,8 @@
 set nocompatible					" don't worry about vi
 filetype off                        " required for Vundle
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
 
 " required for Vundle
 Bundle 'gmarik/Vundle.vim'
