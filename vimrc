@@ -254,7 +254,7 @@ au FileType go setlocal noexpandtab
 
 "==PROSE========================================================================
 autocmd BufRead *\.md setlocal colorcolumn=80 textwidth=80
-autocmd Filetype text setlocal textwidth=80 spell spelllang=en
+autocmd Filetype text setlocal textwidth=0 spell spelllang=en
 "Put a row of equal signs right underneath a line
 nnoremap <leader>1 yypVr=
 "Put a row of minus signs for text files, then enter insert mode
