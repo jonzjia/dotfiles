@@ -35,6 +35,7 @@ Bundle 'bling/vim-airline'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'junegunn/goyo.vim'
+Bundle 'junegunn/limelight.vim'
 
 " vim-scripts repos
 Bundle 'bufexplorer.zip'
