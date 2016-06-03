@@ -9,8 +9,8 @@
 set nocompatible					" don't worry about vi
 filetype off                        " required for Vundle
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=~/.vim/vundle.git/
+call vundle#rc()
 
 " required for Vundle
 Bundle 'gmarik/Vundle.vim'
@@ -35,6 +35,7 @@ Bundle 'bling/vim-airline'
 Bundle 'Shougo/neocomplcache.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'junegunn/goyo.vim'
+Bundle 'junegunn/limelight.vim'
 
 " vim-scripts repos
 Bundle 'bufexplorer.zip'

@@ -6,6 +6,7 @@ vim/undodir/*
 vim/backup/*
 vim/swp/*
 vim/bundle
+vim/vundle.git/
 vim/view
 
 # Ignore local scratch file
