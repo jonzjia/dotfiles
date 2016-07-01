@@ -6,11 +6,11 @@ using a terminal that supports 256 colors.
 Prereqs
 =======
 - git
-- vim, preferably 7.0 or up
+- vim
 
 Installation
 ============
-1. Go to home directory
+1 Go to your home directory
 2. Git clone this repository
 ```
 git clone git@github.com:jonzjia/dotfiles.git dotfiles
@@ -21,5 +21,9 @@ git clone git@github.com:jonzjia/dotfiles.git dotfiles
 ```
 ./make.sh
 ```
-5. Fire up vim and run :BundleInstall
-6. Enjoy Jon Jia's dotfiles
+5. Download vundle
+```
+git clone http://github.com/gmarik/vundle.git ~/.vim/vundle.git
+```
+6. Fire up vim and run :BundleInstall
+7. Enjoy Jon Jia's dotfiles
