@@ -137,14 +137,14 @@ nnoremap <Leader>p :set paste! number!<CR> :call FoldColumnToggle()<CR>
 
 "==MacVim=======================================================================
 if has("gui_macvim")
-    colorscheme hybrid-light
+    "colorscheme hybrid-light
     set vb
     set browsedir=buffer "gui opens current directory
     set guioptions-=T
     set guioptions-=L
     set guioptions-=r
     set transparency=0
-    set guifont=Menlo\ Regular:h12
+    "set guifont=Menlo\ Regular:h12
 endif
 
 "==Plugins======================================================================

@@ -1,6 +1,6 @@
 dotfiles
 ========
-Aww yeah, Jon Jia's dotfiles. These dotfiles assume that you are Jon Jia and
+Jon Jia's dotfiles. These dotfiles assume that you are Jon Jia and
 using a terminal that supports 256 colors.
 
 Prereqs

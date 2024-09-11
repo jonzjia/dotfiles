@@ -83,6 +83,11 @@ alias rm="rm -i $*"
 alias cp="cp -i $*"
 
 
+#--Coinalyze
+alias btc="open https://coinalyze.net/bitcoin/usd/binance/btcusd_perp/price-chart-live/"
+alias eth="open https://coinalyze.net/ethereum/usd/binance/ethusd_perp/price-chart-live/"
+alias funding="open https://www.coinglass.com/FundingRate"
+
 #--2012-Fall------------------------------------------------------------------
 alias words='pushd . && cd ~/Dropbox/[12x]/[LatinII]/Words/ && ~/Dropbox/[12x]/[LatinII]/Words/words'
 
@@ -102,3 +107,4 @@ fi
 
 #-------------------------------------------------------------------------------
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+. "$HOME/.cargo/env"
